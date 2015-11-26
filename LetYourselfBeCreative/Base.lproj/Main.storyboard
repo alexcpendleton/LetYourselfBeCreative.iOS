@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="9060" systemVersion="14F1021" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="9060" systemVersion="14F1021" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="F3D-qf-cnk">
     <dependencies>
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="9051"/>
@@ -8,7 +8,7 @@
         <!--Triads View Controller-->
         <scene sceneID="cV0-jT-cot">
             <objects>
-                <viewController title="Triads" id="Hzw-r7-maA" userLabel="Triads View Controller" sceneMemberID="viewController">
+                <viewController title="Triads" id="Hzw-r7-maA" userLabel="Triads View Controller" customClass="TriadsViewController" customModule="LetYourselfBeCreative" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="uVY-hg-bPi"/>
                         <viewControllerLayoutGuide type="bottom" id="dmo-eR-UlS"/>
@@ -47,18 +47,42 @@
                                 <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="zsg-UI-8S4">
+                                <rect key="frame" x="250" y="540" width="100" height="40"/>
+                                <color key="backgroundColor" red="0.0" green="0.50196081399917603" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="40" id="ae8-uA-ben"/>
+                                    <constraint firstAttribute="width" constant="100" id="rTE-rx-Efd"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="Georgia" family="Georgia" pointSize="24"/>
+                                <state key="normal" title="Again...">
+                                    <color key="titleColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                    <color key="titleShadowColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="againRequested:" destination="Hzw-r7-maA" eventType="touchUpInside" id="b2F-Zt-4hY"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
                             <constraint firstItem="xeB-Hp-A4Q" firstAttribute="centerX" secondItem="H5f-bd-73K" secondAttribute="centerX" id="B9a-AT-nlV"/>
                             <constraint firstItem="RQI-ET-BKE" firstAttribute="top" secondItem="xeB-Hp-A4Q" secondAttribute="bottom" constant="60" id="E8Z-aW-j2H"/>
                             <constraint firstItem="xeB-Hp-A4Q" firstAttribute="top" secondItem="EDe-6f-Twt" secondAttribute="bottom" constant="60" id="Fu1-Mj-ddw"/>
+                            <constraint firstItem="zsg-UI-8S4" firstAttribute="centerX" secondItem="H5f-bd-73K" secondAttribute="centerX" id="RpS-A0-eAC"/>
                             <constraint firstItem="xeB-Hp-A4Q" firstAttribute="centerY" secondItem="H5f-bd-73K" secondAttribute="centerY" id="V0H-7j-9Fa"/>
                             <constraint firstItem="EDe-6f-Twt" firstAttribute="centerX" secondItem="H5f-bd-73K" secondAttribute="centerX" id="cnc-eJ-xUQ"/>
+                            <constraint firstItem="dmo-eR-UlS" firstAttribute="top" secondItem="zsg-UI-8S4" secondAttribute="bottom" constant="20" id="xz0-Kx-pjV"/>
                             <constraint firstItem="RQI-ET-BKE" firstAttribute="centerX" secondItem="H5f-bd-73K" secondAttribute="centerX" id="zW5-kg-6co"/>
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" id="cpb-5P-neg"/>
+                    <connections>
+                        <outlet property="againTrigger" destination="zsg-UI-8S4" id="MhL-94-ABO"/>
+                        <outlet property="word1" destination="EDe-6f-Twt" id="0qx-Ep-HNr"/>
+                        <outlet property="word2" destination="xeB-Hp-A4Q" id="Vio-Hk-Vaa"/>
+                        <outlet property="word3" destination="RQI-ET-BKE" id="a4x-fh-36y"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="srx-d7-mbS" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
