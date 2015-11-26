@@ -8,6 +8,10 @@
 
 /* Begin PBXBuildFile section */
 		217E52CB8842FEAB9F01B6E3 /* Pods.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9D97CB3F09D2EBA7A42B6268 /* Pods.framework */; };
+		4918012B1C07CACF001B1A09 /* Randomization.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4918012A1C07CACF001B1A09 /* Randomization.swift */; };
+		491801311C07CB1B001B1A09 /* HardcodedTriadMaker.swift in Sources */ = {isa = PBXBuildFile; fileRef = 491801301C07CB1B001B1A09 /* HardcodedTriadMaker.swift */; };
+		491801331C07CB30001B1A09 /* TriadModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 491801321C07CB30001B1A09 /* TriadModel.swift */; };
+		491801351C07CB3F001B1A09 /* TriadMakeable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 491801341C07CB3F001B1A09 /* TriadMakeable.swift */; };
 		4931D73C1C068EE9007AFC83 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4931D73B1C068EE9007AFC83 /* AppDelegate.swift */; };
 		4931D7411C068EE9007AFC83 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 4931D73F1C068EE9007AFC83 /* Main.storyboard */; };
 		4931D7441C068EE9007AFC83 /* LetYourselfBeCreative.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 4931D7421C068EE9007AFC83 /* LetYourselfBeCreative.xcdatamodeld */; };
@@ -30,6 +34,10 @@
 /* Begin PBXFileReference section */
 		011DEBA6B6F2950D5E0A95DE /* Pods.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.debug.xcconfig; path = "Pods/Target Support Files/Pods/Pods.debug.xcconfig"; sourceTree = "<group>"; };
 		079C922DB123E48B3FD134AA /* Pods.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.release.xcconfig; path = "Pods/Target Support Files/Pods/Pods.release.xcconfig"; sourceTree = "<group>"; };
+		4918012A1C07CACF001B1A09 /* Randomization.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Randomization.swift; sourceTree = "<group>"; };
+		491801301C07CB1B001B1A09 /* HardcodedTriadMaker.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HardcodedTriadMaker.swift; sourceTree = "<group>"; };
+		491801321C07CB30001B1A09 /* TriadModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TriadModel.swift; sourceTree = "<group>"; };
+		491801341C07CB3F001B1A09 /* TriadMakeable.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TriadMakeable.swift; sourceTree = "<group>"; };
 		4931D7381C068EE9007AFC83 /* LetYourselfBeCreative.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = LetYourselfBeCreative.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		4931D73B1C068EE9007AFC83 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		4931D7401C068EE9007AFC83 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
@@ -64,6 +72,25 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		4918012E1C07CAEF001B1A09 /* Triads */ = {
+			isa = PBXGroup;
+			children = (
+				4931D75F1C069F9F007AFC83 /* TriadsViewController.swift */,
+				491801301C07CB1B001B1A09 /* HardcodedTriadMaker.swift */,
+				491801321C07CB30001B1A09 /* TriadModel.swift */,
+				491801341C07CB3F001B1A09 /* TriadMakeable.swift */,
+			);
+			name = Triads;
+			sourceTree = "<group>";
+		};
+		4918012F1C07CB00001B1A09 /* Utilities */ = {
+			isa = PBXGroup;
+			children = (
+				4918012A1C07CACF001B1A09 /* Randomization.swift */,
+			);
+			name = Utilities;
+			sourceTree = "<group>";
+		};
 		4931D72F1C068EE9007AFC83 = {
 			isa = PBXGroup;
 			children = (
@@ -87,7 +114,8 @@
 		4931D73A1C068EE9007AFC83 /* LetYourselfBeCreative */ = {
 			isa = PBXGroup;
 			children = (
-				4931D75E1C06942C007AFC83 /* ViewControllers */,
+				4918012F1C07CB00001B1A09 /* Utilities */,
+				4918012E1C07CAEF001B1A09 /* Triads */,
 				4931D73B1C068EE9007AFC83 /* AppDelegate.swift */,
 				4931D73F1C068EE9007AFC83 /* Main.storyboard */,
 				4931D7451C068EE9007AFC83 /* Assets.xcassets */,
@@ -106,14 +134,6 @@
 				4931D7551C068EE9007AFC83 /* Info.plist */,
 			);
 			path = LetYourselfBeCreativeTests;
-			sourceTree = "<group>";
-		};
-		4931D75E1C06942C007AFC83 /* ViewControllers */ = {
-			isa = PBXGroup;
-			children = (
-				4931D75F1C069F9F007AFC83 /* TriadsViewController.swift */,
-			);
-			name = ViewControllers;
 			sourceTree = "<group>";
 		};
 		6CC5BF2A1F12EED15578195B /* Pods */ = {
@@ -285,9 +305,13 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				491801331C07CB30001B1A09 /* TriadModel.swift in Sources */,
+				491801351C07CB3F001B1A09 /* TriadMakeable.swift in Sources */,
 				4931D7441C068EE9007AFC83 /* LetYourselfBeCreative.xcdatamodeld in Sources */,
+				4918012B1C07CACF001B1A09 /* Randomization.swift in Sources */,
 				4931D73C1C068EE9007AFC83 /* AppDelegate.swift in Sources */,
 				4931D7601C069F9F007AFC83 /* TriadsViewController.swift in Sources */,
+				491801311C07CB1B001B1A09 /* HardcodedTriadMaker.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
