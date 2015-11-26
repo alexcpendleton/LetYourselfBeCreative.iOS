@@ -1,0 +1,6 @@
+framework module DRImagePlaceholderHelper {
+  umbrella header "DRImagePlaceholderHelper-umbrella.h"
+
+  export *
+  module * { export * }
+}
