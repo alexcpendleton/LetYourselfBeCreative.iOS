@@ -9,12 +9,12 @@
 /* Begin PBXBuildFile section */
 		217E52CB8842FEAB9F01B6E3 /* Pods.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9D97CB3F09D2EBA7A42B6268 /* Pods.framework */; };
 		4931D73C1C068EE9007AFC83 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4931D73B1C068EE9007AFC83 /* AppDelegate.swift */; };
-		4931D73E1C068EE9007AFC83 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4931D73D1C068EE9007AFC83 /* ViewController.swift */; };
 		4931D7411C068EE9007AFC83 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 4931D73F1C068EE9007AFC83 /* Main.storyboard */; };
 		4931D7441C068EE9007AFC83 /* LetYourselfBeCreative.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 4931D7421C068EE9007AFC83 /* LetYourselfBeCreative.xcdatamodeld */; };
 		4931D7461C068EE9007AFC83 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 4931D7451C068EE9007AFC83 /* Assets.xcassets */; };
 		4931D7491C068EE9007AFC83 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 4931D7471C068EE9007AFC83 /* LaunchScreen.storyboard */; };
 		4931D7541C068EE9007AFC83 /* LetYourselfBeCreativeTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4931D7531C068EE9007AFC83 /* LetYourselfBeCreativeTests.swift */; };
+		4931D7601C069F9F007AFC83 /* TriadsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4931D75F1C069F9F007AFC83 /* TriadsViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -32,7 +32,6 @@
 		079C922DB123E48B3FD134AA /* Pods.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.release.xcconfig; path = "Pods/Target Support Files/Pods/Pods.release.xcconfig"; sourceTree = "<group>"; };
 		4931D7381C068EE9007AFC83 /* LetYourselfBeCreative.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = LetYourselfBeCreative.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		4931D73B1C068EE9007AFC83 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		4931D73D1C068EE9007AFC83 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		4931D7401C068EE9007AFC83 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		4931D7431C068EE9007AFC83 /* LetYourselfBeCreative.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = LetYourselfBeCreative.xcdatamodel; sourceTree = "<group>"; };
 		4931D7451C068EE9007AFC83 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -41,6 +40,8 @@
 		4931D74F1C068EE9007AFC83 /* LetYourselfBeCreativeTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = LetYourselfBeCreativeTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		4931D7531C068EE9007AFC83 /* LetYourselfBeCreativeTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LetYourselfBeCreativeTests.swift; sourceTree = "<group>"; };
 		4931D7551C068EE9007AFC83 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		4931D75F1C069F9F007AFC83 /* TriadsViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TriadsViewController.swift; sourceTree = "<group>"; };
+		4931D7611C06A166007AFC83 /* Bridging.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Bridging.h; sourceTree = "<group>"; };
 		9D97CB3F09D2EBA7A42B6268 /* Pods.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
@@ -86,13 +87,14 @@
 		4931D73A1C068EE9007AFC83 /* LetYourselfBeCreative */ = {
 			isa = PBXGroup;
 			children = (
+				4931D75E1C06942C007AFC83 /* ViewControllers */,
 				4931D73B1C068EE9007AFC83 /* AppDelegate.swift */,
-				4931D73D1C068EE9007AFC83 /* ViewController.swift */,
 				4931D73F1C068EE9007AFC83 /* Main.storyboard */,
 				4931D7451C068EE9007AFC83 /* Assets.xcassets */,
 				4931D7471C068EE9007AFC83 /* LaunchScreen.storyboard */,
 				4931D74A1C068EE9007AFC83 /* Info.plist */,
 				4931D7421C068EE9007AFC83 /* LetYourselfBeCreative.xcdatamodeld */,
+				4931D7611C06A166007AFC83 /* Bridging.h */,
 			);
 			path = LetYourselfBeCreative;
 			sourceTree = "<group>";
@@ -104,6 +106,14 @@
 				4931D7551C068EE9007AFC83 /* Info.plist */,
 			);
 			path = LetYourselfBeCreativeTests;
+			sourceTree = "<group>";
+		};
+		4931D75E1C06942C007AFC83 /* ViewControllers */ = {
+			isa = PBXGroup;
+			children = (
+				4931D75F1C069F9F007AFC83 /* TriadsViewController.swift */,
+			);
+			name = ViewControllers;
 			sourceTree = "<group>";
 		};
 		6CC5BF2A1F12EED15578195B /* Pods */ = {
@@ -275,9 +285,9 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				4931D73E1C068EE9007AFC83 /* ViewController.swift in Sources */,
 				4931D7441C068EE9007AFC83 /* LetYourselfBeCreative.xcdatamodeld in Sources */,
 				4931D73C1C068EE9007AFC83 /* AppDelegate.swift in Sources */,
+				4931D7601C069F9F007AFC83 /* TriadsViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -411,6 +421,7 @@
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.alexcpendleton.LetYourselfBeCreative;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = LetYourselfBeCreative/Bridging.h;
 			};
 			name = Debug;
 		};
@@ -423,6 +434,7 @@
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.alexcpendleton.LetYourselfBeCreative;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = LetYourselfBeCreative/Bridging.h;
 			};
 			name = Release;
 		};

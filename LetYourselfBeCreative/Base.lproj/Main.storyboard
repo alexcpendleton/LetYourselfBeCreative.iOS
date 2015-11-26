@@ -1,25 +1,86 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="6211" systemVersion="14A298i" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="BYZ-38-t0r">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="9060" systemVersion="14F1021" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES">
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="6204"/>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="9051"/>
     </dependencies>
     <scenes>
-        <!--View Controller-->
-        <scene sceneID="tne-QT-ifu">
+        <!--Triads View Controller-->
+        <scene sceneID="cV0-jT-cot">
             <objects>
-                <viewController id="BYZ-38-t0r" customClass="ViewController" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController title="Triads" id="Hzw-r7-maA" userLabel="Triads View Controller" sceneMemberID="viewController">
                     <layoutGuides>
-                        <viewControllerLayoutGuide type="top" id="y3c-jy-aDJ"/>
-                        <viewControllerLayoutGuide type="bottom" id="wfy-db-euE"/>
+                        <viewControllerLayoutGuide type="top" id="uVY-hg-bPi"/>
+                        <viewControllerLayoutGuide type="bottom" id="dmo-eR-UlS"/>
                     </layoutGuides>
-                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                    <view key="view" contentMode="scaleToFill" id="H5f-bd-73K">
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="First Word" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="EDe-6f-Twt">
+                                <rect key="frame" x="225" y="181" width="150" height="39"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="150" id="53Y-ak-In7"/>
+                                    <constraint firstAttribute="height" constant="39" id="qrO-ko-KdD"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="italicSystem" pointSize="32"/>
+                                <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Second Word" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="xeB-Hp-A4Q">
+                                <rect key="frame" x="200" y="280" width="200" height="39"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="39" id="KHB-2e-M9K"/>
+                                    <constraint firstAttribute="width" constant="200" id="b0L-he-pDJ"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="italicSystem" pointSize="32"/>
+                                <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Third Word" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="RQI-ET-BKE">
+                                <rect key="frame" x="218" y="379" width="165" height="39"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="39" id="WYf-Pe-uPQ"/>
+                                    <constraint firstAttribute="width" constant="165" id="qx3-cV-Xcf"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="italicSystem" pointSize="32"/>
+                                <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="xeB-Hp-A4Q" firstAttribute="centerX" secondItem="H5f-bd-73K" secondAttribute="centerX" id="B9a-AT-nlV"/>
+                            <constraint firstItem="RQI-ET-BKE" firstAttribute="top" secondItem="xeB-Hp-A4Q" secondAttribute="bottom" constant="60" id="E8Z-aW-j2H"/>
+                            <constraint firstItem="xeB-Hp-A4Q" firstAttribute="top" secondItem="EDe-6f-Twt" secondAttribute="bottom" constant="60" id="Fu1-Mj-ddw"/>
+                            <constraint firstItem="xeB-Hp-A4Q" firstAttribute="centerY" secondItem="H5f-bd-73K" secondAttribute="centerY" id="V0H-7j-9Fa"/>
+                            <constraint firstItem="EDe-6f-Twt" firstAttribute="centerX" secondItem="H5f-bd-73K" secondAttribute="centerX" id="cnc-eJ-xUQ"/>
+                            <constraint firstItem="RQI-ET-BKE" firstAttribute="centerX" secondItem="H5f-bd-73K" secondAttribute="centerX" id="zW5-kg-6co"/>
+                        </constraints>
                     </view>
+                    <navigationItem key="navigationItem" id="cpb-5P-neg"/>
                 </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="srx-d7-mbS" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
+            <point key="canvasLocation" x="1189" y="302"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="tWE-43-m8E">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="F3D-qf-cnk" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="3e0-lf-jYX">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="Hzw-r7-maA" kind="relationship" relationship="rootViewController" id="1pg-Rf-48y"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="WRM-Ic-wsp" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="377" y="302"/>
         </scene>
     </scenes>
 </document>
