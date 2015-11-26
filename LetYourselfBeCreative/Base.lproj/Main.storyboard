@@ -17,31 +17,31 @@
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="First Word" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="EDe-6f-Twt">
-                                <rect key="frame" x="225" y="181" width="150" height="39"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="First Word" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="EDe-6f-Twt">
+                                <rect key="frame" x="20" y="181" width="560" height="39"/>
                                 <constraints>
-                                    <constraint firstAttribute="width" constant="150" id="53Y-ak-In7"/>
+                                    <constraint firstAttribute="width" constant="560" id="53Y-ak-In7"/>
                                     <constraint firstAttribute="height" constant="39" id="qrO-ko-KdD"/>
                                 </constraints>
                                 <fontDescription key="fontDescription" type="italicSystem" pointSize="32"/>
                                 <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Second Word" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="xeB-Hp-A4Q">
-                                <rect key="frame" x="200" y="280" width="200" height="39"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Second Word" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="xeB-Hp-A4Q">
+                                <rect key="frame" x="20" y="280" width="560" height="39"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="39" id="KHB-2e-M9K"/>
-                                    <constraint firstAttribute="width" constant="200" id="b0L-he-pDJ"/>
+                                    <constraint firstAttribute="width" constant="560" id="b0L-he-pDJ"/>
                                 </constraints>
                                 <fontDescription key="fontDescription" type="italicSystem" pointSize="32"/>
                                 <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Third Word" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="RQI-ET-BKE">
-                                <rect key="frame" x="218" y="379" width="165" height="39"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Third Word" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="RQI-ET-BKE">
+                                <rect key="frame" x="20.5" y="379" width="560" height="39"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="39" id="WYf-Pe-uPQ"/>
-                                    <constraint firstAttribute="width" constant="165" id="qx3-cV-Xcf"/>
+                                    <constraint firstAttribute="width" constant="560" id="qx3-cV-Xcf"/>
                                 </constraints>
                                 <fontDescription key="fontDescription" type="italicSystem" pointSize="32"/>
                                 <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
