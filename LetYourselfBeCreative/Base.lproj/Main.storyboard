@@ -1,8 +1,9 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="9060" systemVersion="14F1021" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="F3D-qf-cnk">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="9060" systemVersion="14F1021" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="lGQ-f8-V9D">
     <dependencies>
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="9051"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
     </dependencies>
     <scenes>
         <!--Triads View Controller-->
@@ -23,7 +24,7 @@
                                     <constraint firstAttribute="width" constant="560" id="53Y-ak-In7"/>
                                     <constraint firstAttribute="height" constant="39" id="qrO-ko-KdD"/>
                                 </constraints>
-                                <fontDescription key="fontDescription" type="italicSystem" pointSize="32"/>
+                                <fontDescription key="fontDescription" name="Palatino-Italic" family="Palatino" pointSize="32"/>
                                 <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
@@ -33,7 +34,7 @@
                                     <constraint firstAttribute="height" constant="39" id="KHB-2e-M9K"/>
                                     <constraint firstAttribute="width" constant="560" id="b0L-he-pDJ"/>
                                 </constraints>
-                                <fontDescription key="fontDescription" type="italicSystem" pointSize="32"/>
+                                <fontDescription key="fontDescription" name="Palatino-Italic" family="Palatino" pointSize="32"/>
                                 <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
@@ -43,7 +44,7 @@
                                     <constraint firstAttribute="height" constant="39" id="WYf-Pe-uPQ"/>
                                     <constraint firstAttribute="width" constant="560" id="qx3-cV-Xcf"/>
                                 </constraints>
-                                <fontDescription key="fontDescription" type="italicSystem" pointSize="32"/>
+                                <fontDescription key="fontDescription" name="Palatino-Italic" family="Palatino" pointSize="32"/>
                                 <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
@@ -87,6 +88,125 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="srx-d7-mbS" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="1189" y="302"/>
+        </scene>
+        <!--Word Gallery View Controller-->
+        <scene sceneID="bNv-Av-bEr">
+            <objects>
+                <viewController id="lGQ-f8-V9D" userLabel="Word Gallery View Controller" customClass="WordGalleryViewController" customModule="LetYourselfBeCreative" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="0ya-w0-nTc"/>
+                        <viewControllerLayoutGuide type="bottom" id="zcN-Sa-Klm"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="AHZ-an-IaN">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="AXb-ix-rQE">
+                                <rect key="frame" x="0.0" y="97" width="600" height="503"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="503" id="XLp-sM-dnS"/>
+                                </constraints>
+                                <collectionViewFlowLayout key="collectionViewLayout" minimumLineSpacing="10" minimumInteritemSpacing="10" id="h59-b3-gr6">
+                                    <size key="itemSize" width="600" height="527"/>
+                                    <size key="headerReferenceSize" width="0.0" height="0.0"/>
+                                    <size key="footerReferenceSize" width="0.0" height="0.0"/>
+                                    <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
+                                </collectionViewFlowLayout>
+                                <cells>
+                                    <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="GalleryCell" id="n9p-gA-Op5" customClass="WordGalleryCell" customModule="LetYourselfBeCreative" customModuleProvider="target">
+                                        <rect key="frame" x="0.0" y="0.0" width="600" height="527"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center">
+                                            <rect key="frame" x="0.0" y="0.0" width="600" height="527"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="PGb-Ga-2o4">
+                                                    <rect key="frame" x="8" y="8" width="584" height="485"/>
+                                                </imageView>
+                                            </subviews>
+                                            <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                                        </view>
+                                        <constraints>
+                                            <constraint firstAttribute="bottomMargin" secondItem="PGb-Ga-2o4" secondAttribute="bottom" constant="26" id="SNn-o4-UTd"/>
+                                            <constraint firstItem="PGb-Ga-2o4" firstAttribute="leading" secondItem="n9p-gA-Op5" secondAttribute="leadingMargin" id="SiS-M0-dDx"/>
+                                            <constraint firstItem="PGb-Ga-2o4" firstAttribute="trailing" secondItem="n9p-gA-Op5" secondAttribute="trailingMargin" id="cEY-pi-S5Q"/>
+                                            <constraint firstItem="PGb-Ga-2o4" firstAttribute="top" secondItem="n9p-gA-Op5" secondAttribute="topMargin" id="x7Z-jp-hEW"/>
+                                        </constraints>
+                                        <connections>
+                                            <outlet property="image" destination="PGb-Ga-2o4" id="PQU-lM-cfA"/>
+                                        </connections>
+                                    </collectionViewCell>
+                                </cells>
+                                <connections>
+                                    <outlet property="dataSource" destination="lGQ-f8-V9D" id="dFD-g5-DbL"/>
+                                    <outlet property="delegate" destination="lGQ-f8-V9D" id="KDW-l0-PeF"/>
+                                </connections>
+                            </collectionView>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="LEw-A9-ooS" userLabel="Word Container">
+                                <rect key="frame" x="0.0" y="0.0" width="600" height="97"/>
+                                <subviews>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Chosen Word" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="GYM-gh-aQw">
+                                        <rect key="frame" x="8" y="30" width="584" height="38"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" constant="584" id="ifr-nT-bKP"/>
+                                            <constraint firstAttribute="height" constant="38" id="lPV-ID-lyZ"/>
+                                        </constraints>
+                                        <fontDescription key="fontDescription" name="Palatino-Italic" family="Palatino" pointSize="32"/>
+                                        <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                </subviews>
+                                <constraints>
+                                    <constraint firstItem="GYM-gh-aQw" firstAttribute="centerY" secondItem="LEw-A9-ooS" secondAttribute="centerY" id="Cf3-0z-ahb"/>
+                                    <constraint firstItem="GYM-gh-aQw" firstAttribute="centerX" secondItem="LEw-A9-ooS" secondAttribute="centerX" id="H4T-ID-yBr"/>
+                                    <constraint firstAttribute="height" constant="97" id="R5c-bS-xEd"/>
+                                    <constraint firstAttribute="width" constant="600" id="dUX-zm-4ta"/>
+                                </constraints>
+                                <variation key="default">
+                                    <mask key="constraints">
+                                        <exclude reference="R5c-bS-xEd"/>
+                                        <exclude reference="dUX-zm-4ta"/>
+                                    </mask>
+                                </variation>
+                            </view>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="AXb-ix-rQE" firstAttribute="leading" secondItem="LEw-A9-ooS" secondAttribute="leading" id="0OO-HE-jHt"/>
+                            <constraint firstItem="AXb-ix-rQE" firstAttribute="leading" secondItem="AHZ-an-IaN" secondAttribute="leadingMargin" constant="-20" id="25K-sv-stl"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="AXb-ix-rQE" secondAttribute="trailing" constant="-20" id="3Zh-LL-13Y"/>
+                            <constraint firstItem="AXb-ix-rQE" firstAttribute="trailing" secondItem="LEw-A9-ooS" secondAttribute="trailing" id="Cqm-rL-WCO"/>
+                            <constraint firstItem="AXb-ix-rQE" firstAttribute="bottom" secondItem="zcN-Sa-Klm" secondAttribute="top" id="HQv-Sp-OUh"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="LEw-A9-ooS" secondAttribute="trailing" constant="-20" id="HsF-l0-NED"/>
+                            <constraint firstItem="AXb-ix-rQE" firstAttribute="top" secondItem="LEw-A9-ooS" secondAttribute="bottom" id="OKo-Ky-pJn"/>
+                            <constraint firstItem="LEw-A9-ooS" firstAttribute="centerX" secondItem="AHZ-an-IaN" secondAttribute="centerX" id="RM1-zH-DdZ"/>
+                            <constraint firstItem="AXb-ix-rQE" firstAttribute="top" secondItem="LEw-A9-ooS" secondAttribute="bottom" id="UeL-KZ-PTi"/>
+                            <constraint firstItem="LEw-A9-ooS" firstAttribute="leading" secondItem="AHZ-an-IaN" secondAttribute="leadingMargin" constant="-20" id="aaN-TG-GaR"/>
+                            <constraint firstItem="LEw-A9-ooS" firstAttribute="top" secondItem="0ya-w0-nTc" secondAttribute="bottom" constant="-20" id="hJ3-Ae-ecI"/>
+                            <constraint firstItem="LEw-A9-ooS" firstAttribute="top" secondItem="AHZ-an-IaN" secondAttribute="topMargin" id="jRF-XC-8BN"/>
+                            <constraint firstItem="LEw-A9-ooS" firstAttribute="leading" secondItem="AHZ-an-IaN" secondAttribute="leadingMargin" constant="-20" id="nDc-jZ-O51"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="LEw-A9-ooS" secondAttribute="trailing" constant="-20" id="zE2-7x-vDP"/>
+                        </constraints>
+                        <variation key="default">
+                            <mask key="constraints">
+                                <exclude reference="RM1-zH-DdZ"/>
+                                <exclude reference="aaN-TG-GaR"/>
+                                <exclude reference="jRF-XC-8BN"/>
+                                <exclude reference="zE2-7x-vDP"/>
+                                <exclude reference="0OO-HE-jHt"/>
+                                <exclude reference="Cqm-rL-WCO"/>
+                                <exclude reference="OKo-Ky-pJn"/>
+                            </mask>
+                        </variation>
+                    </view>
+                    <connections>
+                        <outlet property="chosenWord" destination="GYM-gh-aQw" id="B3f-fe-JYc"/>
+                        <outlet property="gallery" destination="AXb-ix-rQE" id="fUS-cU-b9N"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="5xF-ES-ljk" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1878" y="302"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="tWE-43-m8E">

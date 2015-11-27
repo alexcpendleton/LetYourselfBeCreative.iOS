@@ -36,9 +36,9 @@ public class TriadsViewController : UIViewController {
         word3.text = model.words.2
     }
     
-    let maker: TriadMakeable = HardcodedTriadMaker()
+    let builder: TriadBuildable = HardcodedTriadBuilder()
     func makeNewTriad(updateUI: Bool) {
-        model = maker.make()
+        model = builder.build()
         if updateUI {
             setupFromModel()
         }

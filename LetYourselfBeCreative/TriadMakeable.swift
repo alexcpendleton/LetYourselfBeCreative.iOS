@@ -8,6 +8,6 @@
 
 import Foundation
 
-public protocol TriadMakeable {
-    func make()->TriadModel
+public protocol TriadBuildable {
+    func build()->TriadModel
 }
