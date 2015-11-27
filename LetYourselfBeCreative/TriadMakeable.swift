@@ -9,5 +9,5 @@
 import Foundation
 
 public protocol TriadMakeable {
-    func make(numberOfWords: Int)->TriadModel
+    func make()->TriadModel
 }

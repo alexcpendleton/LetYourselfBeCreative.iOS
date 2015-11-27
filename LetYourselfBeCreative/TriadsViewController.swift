@@ -31,14 +31,14 @@ public class TriadsViewController : UIViewController {
     }
     
     func setupFromModel() {
-        word1.text = model.words[0]
-        word2.text = model.words[1]
-        word3.text = model.words[2]
+        word1.text = model.words.0
+        word2.text = model.words.1
+        word3.text = model.words.2
     }
     
     let maker: TriadMakeable = HardcodedTriadMaker()
     func makeNewTriad(updateUI: Bool) {
-        model = maker.make(3)
+        model = maker.make()
         if updateUI {
             setupFromModel()
         }

@@ -9,6 +9,5 @@
 import Foundation
 
 public class TriadModel {
-    public var words = ["", "", ""]
-    
+    public var words = (String, String, String)("", "", "")
 }
