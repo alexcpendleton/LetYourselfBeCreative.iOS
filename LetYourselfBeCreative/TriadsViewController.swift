@@ -16,18 +16,45 @@ public class TriadsViewController : UIViewController {
     @IBOutlet weak var againTrigger: UIButton!
     
     public var model: TriadModel!
+    public var galleryPreparer: WordGalleryViewControllerPreparer!
+    public var builder: TriadBuildable!
+    
+    let wordGallerySegueID = "TriadToWordGallerySegue"
     
     @IBAction func againRequested(sender: AnyObject) {
         makeNewTriad(true)
     }
     
+    func wordLongPressed(sender: UIGestureRecognizer) {
+        if sender.state == .Began {
+            if let label = sender.view as? UILabel {
+                segueToWordGallery(label)
+            }
+        }
+    }
+    
+    private func segueToWordGallery(sender: UILabel) {
+        performSegueWithIdentifier(wordGallerySegueID, sender: sender.text)
+    }
+    public override func viewDidLoad() {
+        // TODO: Get some DI going on here
+        let app = AppDelegate.sharedInstance()
+        galleryPreparer = app.galleryPreparer
+        builder = app.triadBuilder
+        super.viewDidLoad()
+    }
     public override func viewWillAppear(animated: Bool) {
         super.viewWillAppear(animated)
         if model == nil {
             makeNewTriad(false)
         }
         setupFromModel()
-        
+        [word1, word2, word3].forEach { addPressRecognizer($0) }
+    }
+    
+    func addPressRecognizer(toLabel: UILabel) {
+        toLabel.addGestureRecognizer(
+            UILongPressGestureRecognizer(target: self, action: "wordLongPressed:"))
     }
     
     func setupFromModel() {
@@ -36,14 +63,19 @@ public class TriadsViewController : UIViewController {
         word3.text = model.words.2
     }
     
-    let builder: TriadBuildable = HardcodedTriadBuilder()
     func makeNewTriad(updateUI: Bool) {
         model = builder.build()
         if updateUI {
             setupFromModel()
         }
     }
+    
+    override public func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
+        if segue.identifier == wordGallerySegueID {
+            if let wordForSegue = sender as? String {
+                galleryPreparer.prepare(wordForSegue, from: segue.destinationViewController)
+            }
+        }
+    }
 }
-
-
 

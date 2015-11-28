@@ -11,15 +11,12 @@ import UIKit
 import PromiseKit
 
 public class WordGalleryViewController : UIViewController, UICollectionViewDataSource, UICollectionViewDelegate {
-    @IBOutlet weak var chosenWord: UILabel!
     @IBOutlet weak var gallery: UICollectionView!
     
-    public var model: WordGalleryModel = {
-       return HardcodedWordGalleryBuilder().build("paperclip")
-    }()
+    public var model: WordGalleryModel!
     
     func setupFromModel() {
-        chosenWord.text = model.word
+        navigationItem.title = model.word
     }
     
     public override func viewWillAppear(animated: Bool) {

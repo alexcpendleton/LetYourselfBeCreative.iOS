@@ -20,6 +20,7 @@
 		4931D7491C068EE9007AFC83 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 4931D7471C068EE9007AFC83 /* LaunchScreen.storyboard */; };
 		4931D7541C068EE9007AFC83 /* LetYourselfBeCreativeTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4931D7531C068EE9007AFC83 /* LetYourselfBeCreativeTests.swift */; };
 		4931D7601C069F9F007AFC83 /* TriadsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4931D75F1C069F9F007AFC83 /* TriadsViewController.swift */; };
+		49653D5D1C08EB5900710B54 /* WordGalleryViewControllerPreparer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 49653D5C1C08EB5900710B54 /* WordGalleryViewControllerPreparer.swift */; };
 		499858861C07EC04000EC5C7 /* WordGalleryModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 499858851C07EC04000EC5C7 /* WordGalleryModel.swift */; };
 		499858881C07F662000EC5C7 /* WordGalleryCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 499858871C07F662000EC5C7 /* WordGalleryCell.swift */; };
 		4998588A1C07FCF7000EC5C7 /* WordGalleryBuildable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 499858891C07FCF7000EC5C7 /* WordGalleryBuildable.swift */; };
@@ -56,6 +57,7 @@
 		4931D7551C068EE9007AFC83 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		4931D75F1C069F9F007AFC83 /* TriadsViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TriadsViewController.swift; sourceTree = "<group>"; };
 		4931D7611C06A166007AFC83 /* Bridging.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Bridging.h; sourceTree = "<group>"; };
+		49653D5C1C08EB5900710B54 /* WordGalleryViewControllerPreparer.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WordGalleryViewControllerPreparer.swift; sourceTree = "<group>"; };
 		499858851C07EC04000EC5C7 /* WordGalleryModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WordGalleryModel.swift; sourceTree = "<group>"; };
 		499858871C07F662000EC5C7 /* WordGalleryCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WordGalleryCell.swift; sourceTree = "<group>"; };
 		499858891C07FCF7000EC5C7 /* WordGalleryBuildable.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WordGalleryBuildable.swift; sourceTree = "<group>"; };
@@ -109,6 +111,7 @@
 				499858871C07F662000EC5C7 /* WordGalleryCell.swift */,
 				499858891C07FCF7000EC5C7 /* WordGalleryBuildable.swift */,
 				4998588B1C07FD34000EC5C7 /* HardcodedWordGalleryBuilder.swift */,
+				49653D5C1C08EB5900710B54 /* WordGalleryViewControllerPreparer.swift */,
 			);
 			name = "Word Gallery";
 			sourceTree = "<group>";
@@ -340,6 +343,7 @@
 				499858861C07EC04000EC5C7 /* WordGalleryModel.swift in Sources */,
 				491801311C07CB1B001B1A09 /* HardcodedTriadMaker.swift in Sources */,
 				4998588A1C07FCF7000EC5C7 /* WordGalleryBuildable.swift in Sources */,
+				49653D5D1C08EB5900710B54 /* WordGalleryViewControllerPreparer.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

@@ -14,9 +14,21 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 
     var window: UIWindow?
 
+    static var _sharedInstance: AppDelegate!
+    static func sharedInstance() -> AppDelegate {
+        return _sharedInstance
+    }
+    
+    var galleryPreparer: WordGalleryViewControllerPreparer!
+    var triadBuilder: TriadBuildable!
 
     func application(application: UIApplication, didFinishLaunchingWithOptions launchOptions: [NSObject: AnyObject]?) -> Bool {
         // Override point for customization after application launch.
+        AppDelegate._sharedInstance = self
+        
+        galleryPreparer = WordGalleryViewControllerPreparer(galleryBuilder: HardcodedWordGalleryBuilder())
+        triadBuilder = HardcodedTriadBuilder()
+        
         return true
     }
 
