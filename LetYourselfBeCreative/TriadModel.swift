@@ -10,4 +10,6 @@ import Foundation
 
 public class TriadModel {
     public var words = (String, String, String)("", "", "")
+    public var starred = false
+    // todo: implement change detection
 }

@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="9060" systemVersion="14F1021" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="F3D-qf-cnk">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="9060" systemVersion="15B42" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="F3D-qf-cnk">
     <dependencies>
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="9051"/>
@@ -20,6 +20,7 @@
                         <subviews>
                             <label opaque="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="First Word" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="EDe-6f-Twt">
                                 <rect key="frame" x="20" y="181" width="560" height="39"/>
+                                <animations/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="560" id="53Y-ak-In7"/>
                                     <constraint firstAttribute="height" constant="39" id="qrO-ko-KdD"/>
@@ -30,6 +31,7 @@
                             </label>
                             <label opaque="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Second Word" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="xeB-Hp-A4Q">
                                 <rect key="frame" x="20" y="280" width="560" height="39"/>
+                                <animations/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="39" id="KHB-2e-M9K"/>
                                     <constraint firstAttribute="width" constant="560" id="b0L-he-pDJ"/>
@@ -40,6 +42,7 @@
                             </label>
                             <label opaque="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Third Word" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="RQI-ET-BKE">
                                 <rect key="frame" x="20.5" y="379" width="560" height="39"/>
+                                <animations/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="39" id="WYf-Pe-uPQ"/>
                                     <constraint firstAttribute="width" constant="560" id="qx3-cV-Xcf"/>
@@ -48,38 +51,46 @@
                                 <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="zsg-UI-8S4">
-                                <rect key="frame" x="250" y="540" width="100" height="40"/>
-                                <color key="backgroundColor" red="0.0" green="0.50196081399917603" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                            <toolbar opaque="NO" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="kwm-Nf-4rH">
+                                <rect key="frame" x="0.0" y="556" width="600" height="44"/>
+                                <animations/>
                                 <constraints>
-                                    <constraint firstAttribute="height" constant="40" id="ae8-uA-ben"/>
-                                    <constraint firstAttribute="width" constant="100" id="rTE-rx-Efd"/>
+                                    <constraint firstAttribute="width" constant="600" id="3ck-OZ-0ns"/>
+                                    <constraint firstAttribute="height" constant="44" id="X5e-mg-kg7"/>
                                 </constraints>
-                                <fontDescription key="fontDescription" name="Georgia" family="Georgia" pointSize="24"/>
-                                <state key="normal" title="Again...">
-                                    <color key="titleColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
-                                    <color key="titleShadowColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
-                                </state>
-                                <connections>
-                                    <action selector="againRequested:" destination="Hzw-r7-maA" eventType="touchUpInside" id="b2F-Zt-4hY"/>
-                                </connections>
-                            </button>
+                                <items>
+                                    <barButtonItem image="Star" style="plain" id="MtE-WY-7zk">
+                                        <color key="tintColor" red="0.12324084289999999" green="0.4578794316" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                        <connections>
+                                            <action selector="starTogglePressed:" destination="Hzw-r7-maA" id="n4H-4N-kpY"/>
+                                        </connections>
+                                    </barButtonItem>
+                                    <barButtonItem style="plain" systemItem="flexibleSpace" id="4QZ-Ps-cLg"/>
+                                    <barButtonItem systemItem="refresh" id="cU6-qm-mW8">
+                                        <connections>
+                                            <action selector="againRequested:" destination="Hzw-r7-maA" id="9sE-jf-J9C"/>
+                                        </connections>
+                                    </barButtonItem>
+                                </items>
+                            </toolbar>
                         </subviews>
+                        <animations/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
                             <constraint firstItem="xeB-Hp-A4Q" firstAttribute="centerX" secondItem="H5f-bd-73K" secondAttribute="centerX" id="B9a-AT-nlV"/>
+                            <constraint firstItem="kwm-Nf-4rH" firstAttribute="leading" secondItem="H5f-bd-73K" secondAttribute="leadingMargin" constant="-20" id="D3L-KO-WMP"/>
                             <constraint firstItem="RQI-ET-BKE" firstAttribute="top" secondItem="xeB-Hp-A4Q" secondAttribute="bottom" constant="60" id="E8Z-aW-j2H"/>
                             <constraint firstItem="xeB-Hp-A4Q" firstAttribute="top" secondItem="EDe-6f-Twt" secondAttribute="bottom" constant="60" id="Fu1-Mj-ddw"/>
-                            <constraint firstItem="zsg-UI-8S4" firstAttribute="centerX" secondItem="H5f-bd-73K" secondAttribute="centerX" id="RpS-A0-eAC"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="kwm-Nf-4rH" secondAttribute="trailing" constant="-20" id="KiP-G4-4Qn"/>
                             <constraint firstItem="xeB-Hp-A4Q" firstAttribute="centerY" secondItem="H5f-bd-73K" secondAttribute="centerY" id="V0H-7j-9Fa"/>
+                            <constraint firstItem="dmo-eR-UlS" firstAttribute="top" secondItem="kwm-Nf-4rH" secondAttribute="bottom" id="awQ-we-djo"/>
                             <constraint firstItem="EDe-6f-Twt" firstAttribute="centerX" secondItem="H5f-bd-73K" secondAttribute="centerX" id="cnc-eJ-xUQ"/>
-                            <constraint firstItem="dmo-eR-UlS" firstAttribute="top" secondItem="zsg-UI-8S4" secondAttribute="bottom" constant="20" id="xz0-Kx-pjV"/>
                             <constraint firstItem="RQI-ET-BKE" firstAttribute="centerX" secondItem="H5f-bd-73K" secondAttribute="centerX" id="zW5-kg-6co"/>
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" id="cpb-5P-neg"/>
                     <connections>
-                        <outlet property="againTrigger" destination="zsg-UI-8S4" id="MhL-94-ABO"/>
+                        <outlet property="star" destination="MtE-WY-7zk" id="5lM-ee-Sic"/>
                         <outlet property="word1" destination="EDe-6f-Twt" id="0qx-Ep-HNr"/>
                         <outlet property="word2" destination="xeB-Hp-A4Q" id="Vio-Hk-Vaa"/>
                         <outlet property="word3" destination="RQI-ET-BKE" id="a4x-fh-36y"/>
@@ -104,6 +115,7 @@
                         <subviews>
                             <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="AXb-ix-rQE">
                                 <rect key="frame" x="0.0" y="64" width="600" height="536"/>
+                                <animations/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="536" id="XLp-sM-dnS"/>
                                 </constraints>
@@ -123,10 +135,13 @@
                                             <subviews>
                                                 <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="PGb-Ga-2o4">
                                                     <rect key="frame" x="8" y="8" width="584" height="485"/>
+                                                    <animations/>
                                                 </imageView>
                                             </subviews>
+                                            <animations/>
                                             <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                                         </view>
+                                        <animations/>
                                         <constraints>
                                             <constraint firstAttribute="bottomMargin" secondItem="PGb-Ga-2o4" secondAttribute="bottom" constant="26" id="SNn-o4-UTd"/>
                                             <constraint firstItem="PGb-Ga-2o4" firstAttribute="leading" secondItem="n9p-gA-Op5" secondAttribute="leadingMargin" id="SiS-M0-dDx"/>
@@ -144,6 +159,7 @@
                                 </connections>
                             </collectionView>
                         </subviews>
+                        <animations/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
                             <constraint firstItem="AXb-ix-rQE" firstAttribute="leading" secondItem="AHZ-an-IaN" secondAttribute="leadingMargin" constant="-20" id="25K-sv-stl"/>
@@ -168,6 +184,7 @@
                     <navigationBar key="navigationBar" contentMode="scaleToFill" id="3e0-lf-jYX">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
+                        <animations/>
                     </navigationBar>
                     <nil name="viewControllers"/>
                     <connections>
@@ -179,4 +196,7 @@
             <point key="canvasLocation" x="377" y="302"/>
         </scene>
     </scenes>
+    <resources>
+        <image name="Star" width="22" height="22"/>
+    </resources>
 </document>

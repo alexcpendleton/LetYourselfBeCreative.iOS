@@ -13,7 +13,7 @@ public class TriadsViewController : UIViewController {
     @IBOutlet weak var word1: UILabel!
     @IBOutlet weak var word2: UILabel!
     @IBOutlet weak var word3: UILabel!
-    @IBOutlet weak var againTrigger: UIButton!
+    @IBOutlet weak var star: UIBarButtonItem!
     
     public var model: TriadModel!
     public var galleryPreparer: WordGalleryViewControllerPreparer!
@@ -23,6 +23,11 @@ public class TriadsViewController : UIViewController {
     
     @IBAction func againRequested(sender: AnyObject) {
         makeNewTriad(true)
+    }
+    
+    @IBAction func starTogglePressed(sender: AnyObject) {
+        model.starred = !model.starred
+        updateStarFromModel()
     }
     
     func wordLongPressed(sender: UIGestureRecognizer) {
@@ -49,7 +54,6 @@ public class TriadsViewController : UIViewController {
             makeNewTriad(false)
         }
         setupFromModel()
-        [word1, word2, word3].forEach { addPressRecognizer($0) }
     }
     
     func addPressRecognizer(toLabel: UILabel) {
@@ -61,6 +65,8 @@ public class TriadsViewController : UIViewController {
         word1.text = model.words.0
         word2.text = model.words.1
         word3.text = model.words.2
+        [word1, word2, word3].forEach { addPressRecognizer($0) }
+        updateStarFromModel()
     }
     
     func makeNewTriad(updateUI: Bool) {
@@ -68,6 +74,11 @@ public class TriadsViewController : UIViewController {
         if updateUI {
             setupFromModel()
         }
+    }
+    
+    func updateStarFromModel() {
+        let starImageName = model.starred ? "Star Filled" : "Star"
+        star.image = UIImage(named: starImageName)
     }
     
     override public func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
