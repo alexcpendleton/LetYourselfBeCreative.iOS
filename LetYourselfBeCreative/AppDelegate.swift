@@ -8,6 +8,7 @@
 
 import UIKit
 import CoreData
+import BNRCoreDataStack
 
 @UIApplicationMain
 class AppDelegate: UIResponder, UIApplicationDelegate {
@@ -21,6 +22,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     
     var galleryPreparer: WordGalleryViewControllerPreparer!
     var triadBuilder: TriadBuildable!
+    var coreDataStack: CoreDataStack!
 
     func application(application: UIApplication, didFinishLaunchingWithOptions launchOptions: [NSObject: AnyObject]?) -> Bool {
         // Override point for customization after application launch.
@@ -28,6 +30,15 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         
         galleryPreparer = WordGalleryViewControllerPreparer(galleryBuilder: HardcodedWordGalleryBuilder())
         triadBuilder = HardcodedTriadBuilder()
+        
+        CoreDataStack.constructSQLiteStack(withModelName: "LetYourselfBeCreative") { result in
+            switch result {
+            case .Success(let stack):
+                self.coreDataStack = stack
+            case .Failure(let error):
+                print(error)
+            }
+        }
         
         return true
     }
