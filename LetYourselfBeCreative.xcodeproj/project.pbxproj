@@ -23,6 +23,8 @@
 		49653D5D1C08EB5900710B54 /* WordGalleryViewControllerPreparer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 49653D5C1C08EB5900710B54 /* WordGalleryViewControllerPreparer.swift */; };
 		497BEDE11C14B99600A5B7E8 /* AppState+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = 497BEDDF1C14B99600A5B7E8 /* AppState+CoreDataProperties.swift */; };
 		497BEDE21C14B99600A5B7E8 /* AppState.swift in Sources */ = {isa = PBXBuildFile; fileRef = 497BEDE01C14B99600A5B7E8 /* AppState.swift */; };
+		4986CBD61C14EA400068FDB1 /* WordGroup.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4986CBD51C14EA400068FDB1 /* WordGroup.swift */; };
+		4986CBD81C14EA610068FDB1 /* WordModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4986CBD71C14EA610068FDB1 /* WordModel.swift */; };
 		499858861C07EC04000EC5C7 /* WordGalleryModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 499858851C07EC04000EC5C7 /* WordGalleryModel.swift */; };
 		499858881C07F662000EC5C7 /* WordGalleryCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 499858871C07F662000EC5C7 /* WordGalleryCell.swift */; };
 		4998588A1C07FCF7000EC5C7 /* WordGalleryBuildable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 499858891C07FCF7000EC5C7 /* WordGalleryBuildable.swift */; };
@@ -68,6 +70,8 @@
 		49653D5C1C08EB5900710B54 /* WordGalleryViewControllerPreparer.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WordGalleryViewControllerPreparer.swift; sourceTree = "<group>"; };
 		497BEDDF1C14B99600A5B7E8 /* AppState+CoreDataProperties.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "AppState+CoreDataProperties.swift"; sourceTree = "<group>"; };
 		497BEDE01C14B99600A5B7E8 /* AppState.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AppState.swift; sourceTree = "<group>"; };
+		4986CBD51C14EA400068FDB1 /* WordGroup.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WordGroup.swift; sourceTree = "<group>"; };
+		4986CBD71C14EA610068FDB1 /* WordModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WordModel.swift; sourceTree = "<group>"; };
 		499858851C07EC04000EC5C7 /* WordGalleryModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WordGalleryModel.swift; sourceTree = "<group>"; };
 		499858871C07F662000EC5C7 /* WordGalleryCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WordGalleryCell.swift; sourceTree = "<group>"; };
 		499858891C07FCF7000EC5C7 /* WordGalleryBuildable.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WordGalleryBuildable.swift; sourceTree = "<group>"; };
@@ -107,6 +111,8 @@
 				491801301C07CB1B001B1A09 /* HardcodedTriadMaker.swift */,
 				491801321C07CB30001B1A09 /* TriadModel.swift */,
 				491801341C07CB3F001B1A09 /* TriadMakeable.swift */,
+				4986CBD51C14EA400068FDB1 /* WordGroup.swift */,
+				4986CBD71C14EA610068FDB1 /* WordModel.swift */,
 			);
 			name = Triads;
 			sourceTree = "<group>";
@@ -365,6 +371,7 @@
 			files = (
 				491801331C07CB30001B1A09 /* TriadModel.swift in Sources */,
 				491801351C07CB3F001B1A09 /* TriadMakeable.swift in Sources */,
+				4986CBD81C14EA610068FDB1 /* WordModel.swift in Sources */,
 				49BC27131C14B5E500BFB078 /* Word.swift in Sources */,
 				499858881C07F662000EC5C7 /* WordGalleryCell.swift in Sources */,
 				49BC27121C14B5E500BFB078 /* Word+CoreDataProperties.swift in Sources */,
@@ -372,6 +379,7 @@
 				4931D7441C068EE9007AFC83 /* LetYourselfBeCreative.xcdatamodeld in Sources */,
 				4918012B1C07CACF001B1A09 /* Randomization.swift in Sources */,
 				49BC27161C14B5E500BFB078 /* Triad+CoreDataProperties.swift in Sources */,
+				4986CBD61C14EA400068FDB1 /* WordGroup.swift in Sources */,
 				497BEDE21C14B99600A5B7E8 /* AppState.swift in Sources */,
 				4931D73C1C068EE9007AFC83 /* AppDelegate.swift in Sources */,
 				491801381C07E7BC001B1A09 /* WordGalleryViewController.swift in Sources */,

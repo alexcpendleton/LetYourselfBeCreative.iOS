@@ -62,9 +62,10 @@ public class TriadsViewController : UIViewController {
     }
     
     func setupFromModel() {
-        word1.text = model.words.0
-        word2.text = model.words.1
-        word3.text = model.words.2
+        let wordArray = model.words.array
+        word1.text = wordArray[0].text
+        word2.text = wordArray[1].text
+        word3.text = wordArray[2].text
         [word1, word2, word3].forEach { addPressRecognizer($0) }
         updateStarFromModel()
     }

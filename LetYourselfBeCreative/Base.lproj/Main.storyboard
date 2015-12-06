@@ -88,7 +88,7 @@
                             <constraint firstItem="RQI-ET-BKE" firstAttribute="centerX" secondItem="H5f-bd-73K" secondAttribute="centerX" id="zW5-kg-6co"/>
                         </constraints>
                     </view>
-                    <navigationItem key="navigationItem" id="cpb-5P-neg"/>
+                    <navigationItem key="navigationItem" title="Practice Being Creative" id="cpb-5P-neg"/>
                     <connections>
                         <outlet property="star" destination="MtE-WY-7zk" id="5lM-ee-Sic"/>
                         <outlet property="word1" destination="EDe-6f-Twt" id="0qx-Ep-HNr"/>
