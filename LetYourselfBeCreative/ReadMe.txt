@@ -14,4 +14,7 @@ same item to gain further inspiration.
 
 Star a triad of words to store it for later so you can revisit it.
 
+Icons are from Google Material
+https://www.google.com/design/icons/
+
 ===========================================================================
