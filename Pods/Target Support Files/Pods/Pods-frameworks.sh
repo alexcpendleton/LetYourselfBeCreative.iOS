@@ -84,14 +84,12 @@ strip_invalid_archs() {
 
 
 if [[ "$CONFIGURATION" == "Debug" ]]; then
-  install_framework "Pods/BNRCoreDataStack.framework"
   install_framework "Pods/DRImagePlaceholderHelper.framework"
   install_framework "Pods/FileKit.framework"
   install_framework "Pods/OMGHTTPURLRQ.framework"
   install_framework "Pods/PromiseKit.framework"
 fi
 if [[ "$CONFIGURATION" == "Release" ]]; then
-  install_framework "Pods/BNRCoreDataStack.framework"
   install_framework "Pods/DRImagePlaceholderHelper.framework"
   install_framework "Pods/FileKit.framework"
   install_framework "Pods/OMGHTTPURLRQ.framework"

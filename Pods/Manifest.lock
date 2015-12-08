@@ -1,5 +1,4 @@
 PODS:
-  - BNRCoreDataStack (1.1.0)
   - DRImagePlaceholderHelper (1.0.1)
   - FileKit (2.0.0)
   - OMGHTTPURLRQ (3.0.2):
@@ -23,13 +22,11 @@ PODS:
     - PromiseKit/CorePromise
 
 DEPENDENCIES:
-  - BNRCoreDataStack
   - DRImagePlaceholderHelper
   - FileKit
   - PromiseKit
 
 SPEC CHECKSUMS:
-  BNRCoreDataStack: 7649cddec9c1f0143f989be192eba55f79d96437
   DRImagePlaceholderHelper: 88a081952dc6e0c241f6b081781ae4255061aef5
   FileKit: fd360f82f62a1f70dd2ccdbe0950d3a6d1e25d1d
   OMGHTTPURLRQ: 8376dc887d76a5a7e2a67881dc788f917a2f437c
