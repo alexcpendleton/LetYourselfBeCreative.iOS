@@ -120,35 +120,46 @@
                                     <constraint firstAttribute="height" constant="536" id="XLp-sM-dnS"/>
                                 </constraints>
                                 <collectionViewFlowLayout key="collectionViewLayout" minimumLineSpacing="10" minimumInteritemSpacing="10" id="h59-b3-gr6">
-                                    <size key="itemSize" width="600" height="527"/>
+                                    <size key="itemSize" width="600" height="447"/>
                                     <size key="headerReferenceSize" width="0.0" height="0.0"/>
                                     <size key="footerReferenceSize" width="0.0" height="0.0"/>
                                     <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
                                 </collectionViewFlowLayout>
                                 <cells>
                                     <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="GalleryCell" id="n9p-gA-Op5" customClass="WordGalleryCell" customModule="LetYourselfBeCreative" customModuleProvider="target">
-                                        <rect key="frame" x="0.0" y="0.0" width="600" height="527"/>
+                                        <rect key="frame" x="0.0" y="0.0" width="600" height="447"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                         <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center">
-                                            <rect key="frame" x="0.0" y="0.0" width="600" height="527"/>
+                                            <rect key="frame" x="0.0" y="0.0" width="600" height="447"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
-                                                <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="PGb-Ga-2o4">
-                                                    <rect key="frame" x="8" y="8" width="584" height="485"/>
+                                                <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="PGb-Ga-2o4">
+                                                    <rect key="frame" x="8" y="8" width="584" height="429"/>
                                                     <animations/>
                                                 </imageView>
+                                                <activityIndicatorView opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" hidesWhenStopped="YES" animating="YES" style="white" translatesAutoresizingMaskIntoConstraints="NO" id="MWs-oJ-S3P">
+                                                    <rect key="frame" x="290" y="213.5" width="20" height="20"/>
+                                                    <animations/>
+                                                    <constraints>
+                                                        <constraint firstAttribute="width" constant="20" id="cNn-VK-hfx"/>
+                                                        <constraint firstAttribute="height" constant="20" id="xhX-7I-Q9a"/>
+                                                    </constraints>
+                                                </activityIndicatorView>
                                             </subviews>
                                             <animations/>
                                             <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                                         </view>
                                         <animations/>
                                         <constraints>
-                                            <constraint firstAttribute="bottomMargin" secondItem="PGb-Ga-2o4" secondAttribute="bottom" constant="26" id="SNn-o4-UTd"/>
+                                            <constraint firstAttribute="bottomMargin" secondItem="PGb-Ga-2o4" secondAttribute="bottom" constant="82" id="SNn-o4-UTd"/>
                                             <constraint firstItem="PGb-Ga-2o4" firstAttribute="leading" secondItem="n9p-gA-Op5" secondAttribute="leadingMargin" id="SiS-M0-dDx"/>
+                                            <constraint firstItem="MWs-oJ-S3P" firstAttribute="centerX" secondItem="n9p-gA-Op5" secondAttribute="centerX" id="a9W-xU-trm"/>
                                             <constraint firstItem="PGb-Ga-2o4" firstAttribute="trailing" secondItem="n9p-gA-Op5" secondAttribute="trailingMargin" id="cEY-pi-S5Q"/>
+                                            <constraint firstItem="MWs-oJ-S3P" firstAttribute="centerY" secondItem="n9p-gA-Op5" secondAttribute="centerY" id="vdU-Je-T5q"/>
                                             <constraint firstItem="PGb-Ga-2o4" firstAttribute="top" secondItem="n9p-gA-Op5" secondAttribute="topMargin" id="x7Z-jp-hEW"/>
                                         </constraints>
                                         <connections>
+                                            <outlet property="activityIndicator" destination="MWs-oJ-S3P" id="KOJ-yL-ARA"/>
                                             <outlet property="image" destination="PGb-Ga-2o4" id="PQU-lM-cfA"/>
                                         </connections>
                                     </collectionViewCell>

@@ -36,6 +36,7 @@
 		4988DE291C167E17005074D1 /* FlickrWordGalleryBuilder.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4988DE281C167E17005074D1 /* FlickrWordGalleryBuilder.swift */; };
 		4988DE2C1C167EAC005074D1 /* FetchedImageDatum.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4988DE2B1C167EAC005074D1 /* FetchedImageDatum.swift */; };
 		4988DE2E1C167EE2005074D1 /* FlickrImageFetcher.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4988DE2D1C167EE2005074D1 /* FlickrImageFetcher.swift */; };
+		4988DE301C168BEB005074D1 /* SingleButtonAlertMessager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4988DE2F1C168BEB005074D1 /* SingleButtonAlertMessager.swift */; };
 		499858861C07EC04000EC5C7 /* WordGalleryModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 499858851C07EC04000EC5C7 /* WordGalleryModel.swift */; };
 		499858881C07F662000EC5C7 /* WordGalleryCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 499858871C07F662000EC5C7 /* WordGalleryCell.swift */; };
 		4998588A1C07FCF7000EC5C7 /* WordGalleryBuildable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 499858891C07FCF7000EC5C7 /* WordGalleryBuildable.swift */; };
@@ -94,6 +95,7 @@
 		4988DE281C167E17005074D1 /* FlickrWordGalleryBuilder.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FlickrWordGalleryBuilder.swift; sourceTree = "<group>"; };
 		4988DE2B1C167EAC005074D1 /* FetchedImageDatum.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FetchedImageDatum.swift; sourceTree = "<group>"; };
 		4988DE2D1C167EE2005074D1 /* FlickrImageFetcher.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FlickrImageFetcher.swift; sourceTree = "<group>"; };
+		4988DE2F1C168BEB005074D1 /* SingleButtonAlertMessager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SingleButtonAlertMessager.swift; sourceTree = "<group>"; };
 		499858851C07EC04000EC5C7 /* WordGalleryModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WordGalleryModel.swift; sourceTree = "<group>"; };
 		499858871C07F662000EC5C7 /* WordGalleryCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WordGalleryCell.swift; sourceTree = "<group>"; };
 		499858891C07FCF7000EC5C7 /* WordGalleryBuildable.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WordGalleryBuildable.swift; sourceTree = "<group>"; };
@@ -213,6 +215,7 @@
 		4986CBD91C16517A0068FDB1 /* Common */ = {
 			isa = PBXGroup;
 			children = (
+				4988DE2F1C168BEB005074D1 /* SingleButtonAlertMessager.swift */,
 				4986CBE41C165AEA0068FDB1 /* CoreDataStackManager.swift */,
 				4986CBE21C1656760068FDB1 /* WordRepository.swift */,
 				4988DE2A1C167E9F005074D1 /* Flickr */,
@@ -438,6 +441,7 @@
 				4986CBED1C166C210068FDB1 /* InitiallyFillable.swift in Sources */,
 				4998588C1C07FD34000EC5C7 /* HardcodedWordGalleryBuilder.swift in Sources */,
 				4931D7441C068EE9007AFC83 /* LetYourselfBeCreative.xcdatamodeld in Sources */,
+				4988DE301C168BEB005074D1 /* SingleButtonAlertMessager.swift in Sources */,
 				4918012B1C07CACF001B1A09 /* Randomization.swift in Sources */,
 				49BC27161C14B5E500BFB078 /* Triad+CoreDataProperties.swift in Sources */,
 				4986CBE91C1664D90068FDB1 /* TriadRepository.swift in Sources */,

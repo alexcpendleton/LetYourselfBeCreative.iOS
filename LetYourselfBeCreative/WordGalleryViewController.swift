@@ -20,6 +20,13 @@ public class WordGalleryViewController : UIViewController, UICollectionViewDataS
         navigationItem.title = model?.word
     }
     
+    func handleFlickrError(flickrError: ErrorType)->Void {
+        print("Error fetching from flickr: ", flickrError)
+        let messager = SingleButtonAlertMessager()
+        messager.showAlert("We ran into a problem fetching from Flickr. :(", title: "Uh oh!", presentUsing: self)
+        
+    }
+    
     public override func viewWillAppear(animated: Bool) {
         super.viewWillAppear(animated)
         
@@ -28,8 +35,7 @@ public class WordGalleryViewController : UIViewController, UICollectionViewDataS
             self.setupFromModel()
             self.gallery.reloadData()
             return Promise<WordGalleryModel>(data)
-        }
-
+        }.error(handleFlickrError)
     }
     
     public func collectionView(collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
@@ -44,8 +50,9 @@ public class WordGalleryViewController : UIViewController, UICollectionViewDataS
         if imagePromise != nil {
             imagePromise!.image().then { (image:UIImage?) -> Promise<UIImage?> in
                 cell.image?.image = image
+                cell.activityIndicator?.stopAnimating()
                 return Promise<UIImage?>(image)
-            }
+            }.error(handleFlickrError)
         }
 
         return cell
