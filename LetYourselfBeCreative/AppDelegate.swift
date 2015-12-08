@@ -40,7 +40,9 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         self.coreDataStack = stack
         let coreDataContext = stack.managedObjectContext
 
-        galleryPreparer = WordGalleryViewControllerPreparer(galleryBuilder: HardcodedWordGalleryBuilder())
+        galleryPreparer = WordGalleryViewControllerPreparer(galleryBuilder: FlickrWordGalleryBuilder(fetcher:
+            FlickrImageFetcher(apiKey: "06da0ceec36c84fed24c9ae222b4b347"))
+        )
         wordRepo = WordRepository(context: coreDataContext)
         triadRepo = TriadRepository(context: coreDataContext)
         triadBuilder = WordRepoTriadBuilder(wordRepo: wordRepo, triadRepo: triadRepo)

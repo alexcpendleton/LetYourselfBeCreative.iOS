@@ -1,4 +1,13 @@
 TODO:
 
+#Udacity completion#
 - A screen to view starred triads
-- Hook word gallery up to Flickr
+- Readme.txt
+- Flickr error handling?
+
+#Longer term#
+- Onboarding
+- Make it pretty
+- Open image in flickr
+- Make the Flickr search better...seems to pull up irrelevant stuff (scissors = birds...)
+- Storing images?

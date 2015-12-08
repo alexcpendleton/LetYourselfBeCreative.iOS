@@ -22,6 +22,6 @@ public class WordGalleryViewControllerPreparer {
     }
     
     func prepare(word: String, with: WordGalleryViewController) {
-        with.model = builder.build(word)
+        with.modelPromise = builder.build(word)
     }
 }

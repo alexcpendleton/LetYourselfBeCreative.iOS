@@ -16,7 +16,7 @@ public class HardcodedWordGalleryBuilder : WordGalleryBuildable {
     public lazy var imageSize = { return CGSize(width: 600, height: 1000) }()
     public lazy var maxImages = { return 10 }()
     
-    public func build(word: String) -> WordGalleryModel {
+    public func build(word: String) -> Promise<WordGalleryModel> {
         
         let result = WordGalleryModel()
         result.word = word
@@ -26,6 +26,6 @@ public class HardcodedWordGalleryBuilder : WordGalleryBuildable {
             let ph = placeholderSource.placerholderImageWithSize(imageSize, text: text, fillColor: UIColor.cyanColor())
             result.imageLoaders.append(PromisedImage(fetcher: Promise<UIImage?>(ph)))
         }
-        return result
+        return Promise<WordGalleryModel>(result)
     }
 }

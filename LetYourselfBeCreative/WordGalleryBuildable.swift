@@ -10,5 +10,5 @@ import Foundation
 import PromiseKit
 
 public protocol WordGalleryBuildable {
-    func build(word: String) -> WordGalleryModel
+    func build(word: String) -> Promise<WordGalleryModel>
 }

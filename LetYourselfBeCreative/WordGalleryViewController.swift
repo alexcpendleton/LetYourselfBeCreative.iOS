@@ -13,28 +13,39 @@ import PromiseKit
 public class WordGalleryViewController : UIViewController, UICollectionViewDataSource, UICollectionViewDelegate {
     @IBOutlet weak var gallery: UICollectionView!
     
-    public var model: WordGalleryModel!
+    public var modelPromise: Promise<WordGalleryModel>!
+    private var model: WordGalleryModel?
     
     func setupFromModel() {
-        navigationItem.title = model.word
+        navigationItem.title = model?.word
     }
     
     public override func viewWillAppear(animated: Bool) {
         super.viewWillAppear(animated)
-        setupFromModel()
+        
+        modelPromise.then { (data:WordGalleryModel) -> Promise<WordGalleryModel> in
+            self.model = data
+            self.setupFromModel()
+            self.gallery.reloadData()
+            return Promise<WordGalleryModel>(data)
+        }
+
     }
     
     public func collectionView(collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
-        return model.imageLoaders.count
+        if model == nil { return 0 }
+        return model!.imageLoaders.count
     }
     
     public func collectionView(collectionView: UICollectionView, cellForItemAtIndexPath indexPath: NSIndexPath) -> UICollectionViewCell {
         let cell = collectionView.dequeueReusableCellWithReuseIdentifier("GalleryCell", forIndexPath: indexPath) as! WordGalleryCell
         
-        let imagePromise = model.imageLoaders[indexPath.row]
-        imagePromise.image().then { (image:UIImage?) -> Promise<UIImage?> in
-            cell.image?.image = image
-            return Promise<UIImage?>(image)
+        let imagePromise = model?.imageLoaders[indexPath.row]
+        if imagePromise != nil {
+            imagePromise!.image().then { (image:UIImage?) -> Promise<UIImage?> in
+                cell.image?.image = image
+                return Promise<UIImage?>(image)
+            }
         }
 
         return cell
