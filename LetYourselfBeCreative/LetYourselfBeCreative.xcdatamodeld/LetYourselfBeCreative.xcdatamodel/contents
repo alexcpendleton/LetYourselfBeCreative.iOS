@@ -1,21 +1,21 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
 <model userDefinedModelVersionIdentifier="" type="com.apple.IDECoreDataModeler.DataModel" documentVersion="1.0" lastSavedToolsVersion="9057" systemVersion="15B42" minimumToolsVersion="Automatic">
-    <entity name="AppState" representedClassName=".AppState" syncable="YES"/>
-    <entity name="Photo" representedClassName=".Photo" syncable="YES">
+    <entity name="AppState" representedClassName="AppState" syncable="YES"/>
+    <entity name="Photo" representedClassName="Photo" syncable="YES">
         <attribute name="localUri" optional="YES" attributeType="String" syncable="YES"/>
         <attribute name="sourceUri" optional="YES" attributeType="String" syncable="YES"/>
     </entity>
-    <entity name="Triad" representedClassName=".Triad" syncable="YES">
+    <entity name="Triad" representedClassName="Triad" syncable="YES">
         <relationship name="words" optional="YES" toMany="YES" minCount="3" maxCount="3" deletionRule="No Action" destinationEntity="Word" syncable="YES"/>
     </entity>
-    <entity name="Word" representedClassName=".Word" syncable="YES">
+    <entity name="Word" representedClassName="Word" syncable="YES">
         <attribute name="word" optional="YES" attributeType="String" syncable="YES"/>
         <relationship name="photos" optional="YES" maxCount="1" deletionRule="No Action" destinationEntity="Photo" syncable="YES"/>
     </entity>
     <elements>
-        <element name="Photo" positionX="-45" positionY="27" width="128" height="75"/>
-        <element name="Triad" positionX="-63" positionY="-18" width="128" height="58"/>
-        <element name="Word" positionX="-27" positionY="54" width="128" height="75"/>
         <element name="AppState" positionX="-36" positionY="54" width="128" height="45"/>
+        <element name="Photo" positionX="-45" positionY="27" width="128" height="75"/>
+        <element name="Triad" positionX="-63" positionY="-18" width="128" height="60"/>
+        <element name="Word" positionX="-27" positionY="54" width="128" height="75"/>
     </elements>
 </model>

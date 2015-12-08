@@ -9,10 +9,13 @@
 import Foundation
 
 public class WordModel : CustomStringConvertible {
-    init(word: String) {
+    init(word: String, relatedEntity: Word?) {
         text = word
+        entity = relatedEntity
     }
     public var text: String = ""
     
     public var description: String { get { return text } }
+    
+    internal var entity: Word?
 }

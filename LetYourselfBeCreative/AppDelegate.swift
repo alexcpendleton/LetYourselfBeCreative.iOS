@@ -8,7 +8,6 @@
 
 import UIKit
 import CoreData
-import BNRCoreDataStack
 
 @UIApplicationMain
 class AppDelegate: UIResponder, UIApplicationDelegate {
@@ -22,25 +21,28 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     
     var galleryPreparer: WordGalleryViewControllerPreparer!
     var triadBuilder: TriadBuildable!
-    var coreDataStack: CoreDataStack!
+    var coreDataStack: CoreDataStackManager!
+    var initialData: InitialDataFiller!
 
     func application(application: UIApplication, didFinishLaunchingWithOptions launchOptions: [NSObject: AnyObject]?) -> Bool {
         // Override point for customization after application launch.
         AppDelegate._sharedInstance = self
         
+        initializeAppWithDataStack(CoreDataStackManager())
+        
+        return true
+    }
+    
+    func initializeAppWithDataStack(stack: CoreDataStackManager) {
+        self.coreDataStack = stack
+        let coreDataContext = stack.managedObjectContext
+        
         galleryPreparer = WordGalleryViewControllerPreparer(galleryBuilder: HardcodedWordGalleryBuilder())
         triadBuilder = HardcodedTriadBuilder()
         
-        CoreDataStack.constructSQLiteStack(withModelName: "LetYourselfBeCreative") { result in
-            switch result {
-            case .Success(let stack):
-                self.coreDataStack = stack
-            case .Failure(let error):
-                print(error)
-            }
-        }
+        initialData = InitialDataFiller(context: coreDataContext)
+        initialData.fillIfNecessary()
         
-        return true
     }
 
     func applicationWillResignActive(application: UIApplication) {
