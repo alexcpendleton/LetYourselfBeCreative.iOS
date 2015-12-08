@@ -2,8 +2,7 @@ TODO:
 
 #Udacity completion#
 - A screen to view starred triads
-- Readme.txt
-- Flickr error handling?
+- App Icons and splash screen
 
 #Longer term#
 - Onboarding
@@ -11,3 +10,5 @@ TODO:
 - Open image in flickr
 - Make the Flickr search better...seems to pull up irrelevant stuff (scissors = birds...)
 - Storing images?
+- Take photos of your creations
+- Share them somewhere?
