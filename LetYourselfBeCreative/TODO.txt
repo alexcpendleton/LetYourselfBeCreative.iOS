@@ -1,7 +1,5 @@
 TODO:
 
-- Make triads from DB instead of hard coded
-- Make word gallery use DB word (if necessary)
 - Save starred triads
 - A screen to view starred triads
 - Hook word gallery up to Flickr

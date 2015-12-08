@@ -11,9 +11,9 @@ import CoreData
 
 public class InitialDataFiller {
     let context: NSManagedObjectContext!
-    init(context: NSManagedObjectContext) {
+    init(context: NSManagedObjectContext, repo: WordRepository) {
         self.context = context
-        self.wordRepo = WordRepository(context: context)
+        self.wordRepo = repo
     }
     var wordRepo: WordRepository!
 

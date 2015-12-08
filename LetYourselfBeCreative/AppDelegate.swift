@@ -19,6 +19,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         return _sharedInstance
     }
     
+    var wordRepo: WordRepository!
     var galleryPreparer: WordGalleryViewControllerPreparer!
     var triadBuilder: TriadBuildable!
     var coreDataStack: CoreDataStackManager!
@@ -36,11 +37,12 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     func initializeAppWithDataStack(stack: CoreDataStackManager) {
         self.coreDataStack = stack
         let coreDataContext = stack.managedObjectContext
-        
+
         galleryPreparer = WordGalleryViewControllerPreparer(galleryBuilder: HardcodedWordGalleryBuilder())
-        triadBuilder = HardcodedTriadBuilder()
+        wordRepo = WordRepository(context: coreDataContext)
+        triadBuilder = WordRepoTriadBuilder(repo: wordRepo)
         
-        initialData = InitialDataFiller(context: coreDataContext)
+        initialData = InitialDataFiller(context: coreDataContext, repo: wordRepo)
         initialData.fillIfNecessary()
         
     }
