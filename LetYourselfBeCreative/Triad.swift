@@ -9,9 +9,17 @@
 import Foundation
 import CoreData
 
-
+@objc(Triad)
 class Triad: NSManagedObject {
-
-// Insert code here to add functionality to your managed object subclass
+    static let EntityName = "Triad"
+    // Insert code here to add functionality to your managed object subclass
+    override init(entity: NSEntityDescription, insertIntoManagedObjectContext context: NSManagedObjectContext?) {
+        super.init(entity: entity, insertIntoManagedObjectContext: context)
+    }
+    
+    convenience init(context: NSManagedObjectContext?) {
+        let entity = NSEntityDescription.entityForName(Triad.EntityName, inManagedObjectContext: context!)
+        self.init(entity: entity!, insertIntoManagedObjectContext: context)
+    }
 
 }

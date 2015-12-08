@@ -9,27 +9,15 @@
 import Foundation
 import CoreData
 
-public class WordRepository {
-    let context: NSManagedObjectContext
-    
+class WordRepository : RepositoryBase<Word> {
     init(context: NSManagedObjectContext) {
-        self.context = context
+        super.init(entityName: Word.EntityName, context: context)
     }
     
-    internal func all() -> [Word] {
+    func byText(texts:[String]) throws -> [Word] {
         let request = makeFetch()
-        var results = [Word]()
-        do {
-            let fetched = try executeMultiFetch(request)
-            results.appendContentsOf(fetched)
-        } catch {
-            print("There was an error fetching all the words. It was suppressed and no results were returned.")
-        }
-        return results
+        request.predicate = NSPredicate(format: "word in %@", texts)
+        
+        return try executeMultiFetch(request)
     }
-    
-    private func executeMultiFetch(request: NSFetchRequest) throws -> [Word] {
-        return try context.executeFetchRequest(request) as! [Word]
-    }
-    private func makeFetch()-> NSFetchRequest { return NSFetchRequest(entityName: Word.EntityName) }
 }

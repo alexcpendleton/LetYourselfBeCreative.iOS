@@ -11,27 +11,25 @@ import CoreData
 
 public class InitialDataFiller {
     let context: NSManagedObjectContext!
-    init(context: NSManagedObjectContext, repo: WordRepository) {
+    var fillers: [InitiallyFillable]
+    init(context: NSManagedObjectContext, fillers:[InitiallyFillable]) {
         self.context = context
-        self.wordRepo = repo
+        self.fillers = fillers
     }
-    var wordRepo: WordRepository!
-
     public func fillIfNecessary() {
-        if !hasBeenFilled() {
-            fillWords()
+        for item in fillers {
+            if !item.hasBeenFilled() {
+                item.fill()
+            }
         }
     }
     
-    func hasBeenFilled() -> Bool {
-        return wordRepo.all().count > 0
-    }
-    
-    func fillWords() {
-        let words = InitialWords().theWords()
-        for word in words {
-            _ = Word(word: word, context: context)
-        }
-        try! context.save()
+     static func smart(context: NSManagedObjectContext,
+        wordRepo: WordRepository,
+        triadRepo: TriadRepository) -> InitialDataFiller {
+        var fillWith = [InitiallyFillable]()
+        fillWith.append(InitialWords(wordRepo: wordRepo))
+        fillWith.append(InitialTriads(wordRepo: wordRepo, triadRepo: triadRepo))
+        return InitialDataFiller(context: context, fillers: fillWith)
     }
 }

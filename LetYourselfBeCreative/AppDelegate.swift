@@ -20,6 +20,8 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     }
     
     var wordRepo: WordRepository!
+    var triadRepo: TriadRepository!
+    
     var galleryPreparer: WordGalleryViewControllerPreparer!
     var triadBuilder: TriadBuildable!
     var coreDataStack: CoreDataStackManager!
@@ -40,9 +42,10 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 
         galleryPreparer = WordGalleryViewControllerPreparer(galleryBuilder: HardcodedWordGalleryBuilder())
         wordRepo = WordRepository(context: coreDataContext)
-        triadBuilder = WordRepoTriadBuilder(repo: wordRepo)
-        
-        initialData = InitialDataFiller(context: coreDataContext, repo: wordRepo)
+        triadRepo = TriadRepository(context: coreDataContext)
+        triadBuilder = WordRepoTriadBuilder(wordRepo: wordRepo, triadRepo: triadRepo)
+        //triadBuilder = KnownTriadBuilder(repo: triadRepo)
+        initialData = InitialDataFiller.smart(coreDataContext, wordRepo: wordRepo, triadRepo: triadRepo)
         initialData.fillIfNecessary()
         
     }

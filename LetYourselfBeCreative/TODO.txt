@@ -1,5 +1,5 @@
 TODO:
 
-- Save starred triads
 - A screen to view starred triads
 - Hook word gallery up to Flickr
+- Remove BNRCoreDataStack

@@ -29,6 +29,10 @@
 		4986CBE31C1656760068FDB1 /* WordRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4986CBE21C1656760068FDB1 /* WordRepository.swift */; };
 		4986CBE51C165AEA0068FDB1 /* CoreDataStackManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4986CBE41C165AEA0068FDB1 /* CoreDataStackManager.swift */; };
 		4986CBE71C1662300068FDB1 /* WordRepoTriadBuilder.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4986CBE61C1662300068FDB1 /* WordRepoTriadBuilder.swift */; };
+		4986CBE91C1664D90068FDB1 /* TriadRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4986CBE81C1664D90068FDB1 /* TriadRepository.swift */; };
+		4986CBEB1C1668B30068FDB1 /* RepositoryBase.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4986CBEA1C1668B30068FDB1 /* RepositoryBase.swift */; };
+		4986CBED1C166C210068FDB1 /* InitiallyFillable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4986CBEC1C166C210068FDB1 /* InitiallyFillable.swift */; };
+		4986CBEF1C166C890068FDB1 /* InitialTriads.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4986CBEE1C166C890068FDB1 /* InitialTriads.swift */; };
 		499858861C07EC04000EC5C7 /* WordGalleryModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 499858851C07EC04000EC5C7 /* WordGalleryModel.swift */; };
 		499858881C07F662000EC5C7 /* WordGalleryCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 499858871C07F662000EC5C7 /* WordGalleryCell.swift */; };
 		4998588A1C07FCF7000EC5C7 /* WordGalleryBuildable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 499858891C07FCF7000EC5C7 /* WordGalleryBuildable.swift */; };
@@ -80,6 +84,10 @@
 		4986CBE21C1656760068FDB1 /* WordRepository.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WordRepository.swift; sourceTree = "<group>"; };
 		4986CBE41C165AEA0068FDB1 /* CoreDataStackManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CoreDataStackManager.swift; sourceTree = "<group>"; };
 		4986CBE61C1662300068FDB1 /* WordRepoTriadBuilder.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WordRepoTriadBuilder.swift; sourceTree = "<group>"; };
+		4986CBE81C1664D90068FDB1 /* TriadRepository.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TriadRepository.swift; sourceTree = "<group>"; };
+		4986CBEA1C1668B30068FDB1 /* RepositoryBase.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RepositoryBase.swift; sourceTree = "<group>"; };
+		4986CBEC1C166C210068FDB1 /* InitiallyFillable.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = InitiallyFillable.swift; sourceTree = "<group>"; };
+		4986CBEE1C166C890068FDB1 /* InitialTriads.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = InitialTriads.swift; sourceTree = "<group>"; };
 		499858851C07EC04000EC5C7 /* WordGalleryModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WordGalleryModel.swift; sourceTree = "<group>"; };
 		499858871C07F662000EC5C7 /* WordGalleryCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WordGalleryCell.swift; sourceTree = "<group>"; };
 		499858891C07FCF7000EC5C7 /* WordGalleryBuildable.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WordGalleryBuildable.swift; sourceTree = "<group>"; };
@@ -121,6 +129,7 @@
 				4986CBD51C14EA400068FDB1 /* WordGroup.swift */,
 				4986CBD71C14EA610068FDB1 /* WordModel.swift */,
 				4986CBE61C1662300068FDB1 /* WordRepoTriadBuilder.swift */,
+				4986CBE81C1664D90068FDB1 /* TriadRepository.swift */,
 			);
 			name = Triads;
 			sourceTree = "<group>";
@@ -198,7 +207,9 @@
 			isa = PBXGroup;
 			children = (
 				4986CBE41C165AEA0068FDB1 /* CoreDataStackManager.swift */,
+				4986CBE21C1656760068FDB1 /* WordRepository.swift */,
 				4986CBDE1C1652030068FDB1 /* InitialData */,
+				4986CBEA1C1668B30068FDB1 /* RepositoryBase.swift */,
 			);
 			name = Common;
 			sourceTree = "<group>";
@@ -208,6 +219,8 @@
 			children = (
 				4986CBDA1C1651840068FDB1 /* InitialDataFiller.swift */,
 				4986CBDF1C1652140068FDB1 /* InitialWords.swift */,
+				4986CBEC1C166C210068FDB1 /* InitiallyFillable.swift */,
+				4986CBEE1C166C890068FDB1 /* InitialTriads.swift */,
 			);
 			name = InitialData;
 			sourceTree = "<group>";
@@ -223,7 +236,6 @@
 				49BC270F1C14B5E500BFB078 /* Photo.swift */,
 				49BC27101C14B5E500BFB078 /* Triad+CoreDataProperties.swift */,
 				49BC27111C14B5E500BFB078 /* Triad.swift */,
-				4986CBE21C1656760068FDB1 /* WordRepository.swift */,
 			);
 			name = Entities;
 			sourceTree = "<group>";
@@ -405,10 +417,12 @@
 				49BC27131C14B5E500BFB078 /* Word.swift in Sources */,
 				499858881C07F662000EC5C7 /* WordGalleryCell.swift in Sources */,
 				49BC27121C14B5E500BFB078 /* Word+CoreDataProperties.swift in Sources */,
+				4986CBED1C166C210068FDB1 /* InitiallyFillable.swift in Sources */,
 				4998588C1C07FD34000EC5C7 /* HardcodedWordGalleryBuilder.swift in Sources */,
 				4931D7441C068EE9007AFC83 /* LetYourselfBeCreative.xcdatamodeld in Sources */,
 				4918012B1C07CACF001B1A09 /* Randomization.swift in Sources */,
 				49BC27161C14B5E500BFB078 /* Triad+CoreDataProperties.swift in Sources */,
+				4986CBE91C1664D90068FDB1 /* TriadRepository.swift in Sources */,
 				4986CBD61C14EA400068FDB1 /* WordGroup.swift in Sources */,
 				497BEDE21C14B99600A5B7E8 /* AppState.swift in Sources */,
 				4931D73C1C068EE9007AFC83 /* AppDelegate.swift in Sources */,
@@ -418,8 +432,10 @@
 				4931D7601C069F9F007AFC83 /* TriadsViewController.swift in Sources */,
 				499858861C07EC04000EC5C7 /* WordGalleryModel.swift in Sources */,
 				4986CBE01C1652140068FDB1 /* InitialWords.swift in Sources */,
+				4986CBEB1C1668B30068FDB1 /* RepositoryBase.swift in Sources */,
 				497BEDE11C14B99600A5B7E8 /* AppState+CoreDataProperties.swift in Sources */,
 				4998588A1C07FCF7000EC5C7 /* WordGalleryBuildable.swift in Sources */,
+				4986CBEF1C166C890068FDB1 /* InitialTriads.swift in Sources */,
 				4986CBDB1C1651840068FDB1 /* InitialDataFiller.swift in Sources */,
 				49BC27171C14B5E500BFB078 /* Triad.swift in Sources */,
 				49BC27141C14B5E500BFB078 /* Photo+CoreDataProperties.swift in Sources */,

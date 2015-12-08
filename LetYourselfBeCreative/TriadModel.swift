@@ -7,32 +7,20 @@
 //
 
 import Foundation
+typealias TriadModelChanged = (sender: TriadModel)->Void
 
-public class TriadModel {
+public class TriadModel  {
+    init(entity: Triad?, changeHandler: TriadModelChanged) {
+        self.entity = entity
+        self.starredChangedHandler = changeHandler
+    }
     public var words: WordGroup!
-    public var starred = false
-    // todo: implement change detection
-    
-    // Triads don't exist when they're not starred,
-    // so we create or delete as it changes
-    
-    private func onStarredChange() {
-        if starred {
-            create()
-        } else {
-            delete()
+    public var starred: Bool = false {
+        didSet {
+            print("starred changed:", self)
+            starredChangedHandler?(sender: self)
         }
     }
-    
-    private var entity: Triad?
-    
-    private func create() {
-        entity = Triad()
-        // TODO: Figure out words
-        entity?.words = []
-    }
-    
-    private func delete() {
-        entity?.delete(self)
-    }
+    var entity: Triad? = nil
+    var starredChangedHandler: TriadModelChanged?
 }
