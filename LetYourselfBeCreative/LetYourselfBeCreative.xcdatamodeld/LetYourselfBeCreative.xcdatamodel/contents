@@ -6,11 +6,11 @@
         <attribute name="sourceUri" optional="YES" attributeType="String" syncable="YES"/>
     </entity>
     <entity name="Triad" representedClassName="Triad" syncable="YES">
-        <relationship name="words" optional="YES" toMany="YES" minCount="3" maxCount="3" deletionRule="No Action" destinationEntity="Word" syncable="YES"/>
+        <relationship name="words" optional="YES" toMany="YES" deletionRule="No Action" destinationEntity="Word" inverseName="triad" inverseEntity="Word" syncable="YES"/>
     </entity>
     <entity name="Word" representedClassName="Word" syncable="YES">
         <attribute name="word" optional="YES" attributeType="String" syncable="YES"/>
-        <relationship name="photos" optional="YES" maxCount="1" deletionRule="No Action" destinationEntity="Photo" syncable="YES"/>
+        <relationship name="triad" optional="YES" toMany="YES" deletionRule="No Action" destinationEntity="Triad" inverseName="words" inverseEntity="Triad" syncable="YES"/>
     </entity>
     <elements>
         <element name="AppState" positionX="-36" positionY="54" width="128" height="45"/>

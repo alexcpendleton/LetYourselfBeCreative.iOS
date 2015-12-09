@@ -9,7 +9,8 @@
         <!--Triads View Controller-->
         <scene sceneID="cV0-jT-cot">
             <objects>
-                <viewController title="Triads" id="Hzw-r7-maA" userLabel="Triads View Controller" customClass="TriadsViewController" customModule="LetYourselfBeCreative" customModuleProvider="target" sceneMemberID="viewController">
+                <placeholder placeholderIdentifier="IBFirstResponder" id="srx-d7-mbS" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                <viewController storyboardIdentifier="TriadsViewController" title="Triads" useStoryboardIdentifierAsRestorationIdentifier="YES" id="Hzw-r7-maA" userLabel="Triads View Controller" customClass="TriadsViewController" customModule="LetYourselfBeCreative" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="uVY-hg-bPi"/>
                         <viewControllerLayoutGuide type="bottom" id="dmo-eR-UlS"/>
@@ -97,9 +98,67 @@
                         <segue destination="lGQ-f8-V9D" kind="show" identifier="TriadToWordGallerySegue" id="dza-bu-H7b"/>
                     </connections>
                 </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="srx-d7-mbS" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="1189" y="302"/>
+        </scene>
+        <!--Bookmarked Triads-->
+        <scene sceneID="YbY-cm-vuQ">
+            <objects>
+                <viewController automaticallyAdjustsScrollViewInsets="NO" useStoryboardIdentifierAsRestorationIdentifier="YES" id="etE-Xh-qDd" userLabel="Bookmarked Triads" customClass="BookmarkedTriadsViewController" customModule="LetYourselfBeCreative" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="BEy-0P-BQv"/>
+                        <viewControllerLayoutGuide type="bottom" id="EKO-21-Mg5"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="XGE-2R-lEB">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" allowsSelectionDuringEditing="YES" allowsMultipleSelectionDuringEditing="YES" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="1DW-1M-hgw">
+                                <rect key="frame" x="0.0" y="64" width="600" height="536"/>
+                                <animations/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <prototypes>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="BookmarkedTriadCell" id="WW1-e1-eoV">
+                                        <rect key="frame" x="0.0" y="28" width="600" height="44"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="WW1-e1-eoV" id="Eoa-A5-beD">
+                                            <rect key="frame" x="0.0" y="0.0" width="600" height="43.5"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <animations/>
+                                        </tableViewCellContentView>
+                                        <animations/>
+                                    </tableViewCell>
+                                </prototypes>
+                                <connections>
+                                    <outlet property="dataSource" destination="etE-Xh-qDd" id="gmg-rU-BAZ"/>
+                                    <outlet property="delegate" destination="etE-Xh-qDd" id="6rk-gi-zJK"/>
+                                </connections>
+                            </tableView>
+                        </subviews>
+                        <animations/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="1DW-1M-hgw" firstAttribute="leading" secondItem="XGE-2R-lEB" secondAttribute="leading" id="X8n-Cz-juO"/>
+                            <constraint firstItem="1DW-1M-hgw" firstAttribute="bottom" secondItem="EKO-21-Mg5" secondAttribute="top" id="YHO-AN-7HA"/>
+                            <constraint firstAttribute="trailing" secondItem="1DW-1M-hgw" secondAttribute="trailing" id="cVg-Kv-e8k"/>
+                            <constraint firstItem="1DW-1M-hgw" firstAttribute="top" secondItem="BEy-0P-BQv" secondAttribute="bottom" id="pdz-sC-k1R"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" title="Challenges" id="V7J-1G-If2">
+                        <barButtonItem key="rightBarButtonItem" systemItem="compose" id="VRK-hb-T2H">
+                            <connections>
+                                <action selector="newTriadRequested:" destination="etE-Xh-qDd" id="ZjF-O1-r6m"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
+                    <connections>
+                        <outlet property="table" destination="1DW-1M-hgw" id="C4L-tA-gJB"/>
+                        <segue destination="Hzw-r7-maA" kind="show" id="q6D-GA-6sE"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="gIG-0M-rRI" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="515" y="302"/>
         </scene>
         <!--Word Gallery View Controller-->
         <scene sceneID="bNv-Av-bEr">
@@ -199,12 +258,12 @@
                     </navigationBar>
                     <nil name="viewControllers"/>
                     <connections>
-                        <segue destination="Hzw-r7-maA" kind="relationship" relationship="rootViewController" id="1pg-Rf-48y"/>
+                        <segue destination="etE-Xh-qDd" kind="relationship" relationship="rootViewController" id="6tK-tn-erv"/>
                     </connections>
                 </navigationController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="WRM-Ic-wsp" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="377" y="302"/>
+            <point key="canvasLocation" x="-167" y="302"/>
         </scene>
     </scenes>
     <resources>

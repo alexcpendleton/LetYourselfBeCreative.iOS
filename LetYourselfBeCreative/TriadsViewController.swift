@@ -27,6 +27,11 @@ public class TriadsViewController : UIViewController {
     
     @IBAction func starTogglePressed(sender: AnyObject) {
         model.starred = !model.starred
+        if (model.starred) {
+            builder.bookmark(model)
+        } else {
+            builder.unbookmark(model)
+        }
         updateStarFromModel()
     }
     

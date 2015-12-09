@@ -10,8 +10,9 @@
 		217E52CB8842FEAB9F01B6E3 /* Pods.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9D97CB3F09D2EBA7A42B6268 /* Pods.framework */; };
 		4918012B1C07CACF001B1A09 /* Randomization.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4918012A1C07CACF001B1A09 /* Randomization.swift */; };
 		491801331C07CB30001B1A09 /* TriadModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 491801321C07CB30001B1A09 /* TriadModel.swift */; };
-		491801351C07CB3F001B1A09 /* TriadMakeable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 491801341C07CB3F001B1A09 /* TriadMakeable.swift */; };
+		491801351C07CB3F001B1A09 /* TriadBuildable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 491801341C07CB3F001B1A09 /* TriadBuildable.swift */; };
 		491801381C07E7BC001B1A09 /* WordGalleryViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 491801371C07E7BC001B1A09 /* WordGalleryViewController.swift */; };
+		4925C6F21C17A38700E591D9 /* BookmarkedTriadsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4925C6F11C17A38700E591D9 /* BookmarkedTriadsViewController.swift */; };
 		4931D73C1C068EE9007AFC83 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4931D73B1C068EE9007AFC83 /* AppDelegate.swift */; };
 		4931D7411C068EE9007AFC83 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 4931D73F1C068EE9007AFC83 /* Main.storyboard */; };
 		4931D7441C068EE9007AFC83 /* LetYourselfBeCreative.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 4931D7421C068EE9007AFC83 /* LetYourselfBeCreative.xcdatamodeld */; };
@@ -65,8 +66,9 @@
 		079C922DB123E48B3FD134AA /* Pods.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.release.xcconfig; path = "Pods/Target Support Files/Pods/Pods.release.xcconfig"; sourceTree = "<group>"; };
 		4918012A1C07CACF001B1A09 /* Randomization.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Randomization.swift; sourceTree = "<group>"; };
 		491801321C07CB30001B1A09 /* TriadModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TriadModel.swift; sourceTree = "<group>"; };
-		491801341C07CB3F001B1A09 /* TriadMakeable.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TriadMakeable.swift; sourceTree = "<group>"; };
+		491801341C07CB3F001B1A09 /* TriadBuildable.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TriadBuildable.swift; sourceTree = "<group>"; };
 		491801371C07E7BC001B1A09 /* WordGalleryViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WordGalleryViewController.swift; sourceTree = "<group>"; };
+		4925C6F11C17A38700E591D9 /* BookmarkedTriadsViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BookmarkedTriadsViewController.swift; sourceTree = "<group>"; };
 		4931D7381C068EE9007AFC83 /* LetYourselfBeCreative.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = LetYourselfBeCreative.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		4931D73B1C068EE9007AFC83 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		4931D7401C068EE9007AFC83 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
@@ -133,9 +135,10 @@
 		4918012E1C07CAEF001B1A09 /* Triads */ = {
 			isa = PBXGroup;
 			children = (
+				4925C6EF1C17A33F00E591D9 /* Bookmarked Triads */,
 				4931D75F1C069F9F007AFC83 /* TriadsViewController.swift */,
 				491801321C07CB30001B1A09 /* TriadModel.swift */,
-				491801341C07CB3F001B1A09 /* TriadMakeable.swift */,
+				491801341C07CB3F001B1A09 /* TriadBuildable.swift */,
 				4986CBD51C14EA400068FDB1 /* WordGroup.swift */,
 				4986CBD71C14EA610068FDB1 /* WordModel.swift */,
 				4986CBE61C1662300068FDB1 /* WordRepoTriadBuilder.swift */,
@@ -164,6 +167,14 @@
 				4988DE281C167E17005074D1 /* FlickrWordGalleryBuilder.swift */,
 			);
 			name = "Word Gallery";
+			sourceTree = "<group>";
+		};
+		4925C6EF1C17A33F00E591D9 /* Bookmarked Triads */ = {
+			isa = PBXGroup;
+			children = (
+				4925C6F11C17A38700E591D9 /* BookmarkedTriadsViewController.swift */,
+			);
+			name = "Bookmarked Triads";
 			sourceTree = "<group>";
 		};
 		4931D72F1C068EE9007AFC83 = {
@@ -435,7 +446,7 @@
 			files = (
 				491801331C07CB30001B1A09 /* TriadModel.swift in Sources */,
 				4986CBE71C1662300068FDB1 /* WordRepoTriadBuilder.swift in Sources */,
-				491801351C07CB3F001B1A09 /* TriadMakeable.swift in Sources */,
+				491801351C07CB3F001B1A09 /* TriadBuildable.swift in Sources */,
 				4986CBE51C165AEA0068FDB1 /* CoreDataStackManager.swift in Sources */,
 				4986CBD81C14EA610068FDB1 /* WordModel.swift in Sources */,
 				49BC27131C14B5E500BFB078 /* Word.swift in Sources */,
@@ -457,6 +468,7 @@
 				49BC27151C14B5E500BFB078 /* Photo.swift in Sources */,
 				4986CBE31C1656760068FDB1 /* WordRepository.swift in Sources */,
 				4931D7601C069F9F007AFC83 /* TriadsViewController.swift in Sources */,
+				4925C6F21C17A38700E591D9 /* BookmarkedTriadsViewController.swift in Sources */,
 				499858861C07EC04000EC5C7 /* WordGalleryModel.swift in Sources */,
 				4986CBE01C1652140068FDB1 /* InitialWords.swift in Sources */,
 				4986CBEB1C1668B30068FDB1 /* RepositoryBase.swift in Sources */,

@@ -21,5 +21,14 @@ class Triad: NSManagedObject {
         let entity = NSEntityDescription.entityForName(Triad.EntityName, inManagedObjectContext: context!)
         self.init(entity: entity!, insertIntoManagedObjectContext: context)
     }
+    
+    override func willSave() {
+        print("/*******")
+        print("Saving a triad")
+        print("Number of words: ", words?.count)
+        print(words!)
+        print("*******/")
+        super.willSave()
+    }
 
 }

@@ -15,33 +15,55 @@ public class WordRepoTriadBuilder : TriadBuildable {
     }
     
     public func build() -> TriadModel {
-        let result = TriadModel(entity: nil, changeHandler: self.changeHandler)
         let allWords = repos.word.all()
         let indices = 3.uniqueIndicesFrom(allWords)
-        result.words = try! WordGroup(wordsToUse: indices.map { single(fromEntity: allWords[$0]) })
+        let result = buildFromTriadEntity(nil)
+        result.words = try! WordGroup(wordsToUse: indices.map { singleWordModel(fromEntity: allWords[$0]) })
         
         return result
     }
     
-    func changeHandler(sender: TriadModel) -> Void {
-        let context = repos.triad.context
-        if sender.starred {
-            let created = Triad(context: context)
-            let words = sender.words.array.map { $0.entity! }
-            created.words = NSSet(array: words)
-            sender.entity = created
-        } else {
-            if sender.entity != nil {
-                context.deleteObject(sender.entity!)
-                sender.entity = nil
-            } else {
-                print("Encountered an empty TriadModel.entity while trying to un-star. This should never actually happen...")
+    func buildFromTriadEntity(entity: Triad?) -> TriadModel {
+        let starred = entity != nil
+        let result = TriadModel(entity: entity, starred: starred)
+        if entity != nil {
+            var wordEntities = [WordModel]()
+            for item in entity!.words! {
+                if let wordEntity = item as? Word {
+                    wordEntities.append(singleWordModel(fromEntity: wordEntity))
+                } else {
+                    print("/*******")
+                    print("entity somehow wasn't a Word")
+                    print(item)
+                    print("*******/")
+                }
             }
+            result.words = try! WordGroup(wordsToUse: wordEntities)
+        }
+        return result
+    }
+    
+    public func all() -> [TriadModel] {
+        return repos.triad.all().map { buildFromTriadEntity($0) }
+    }
+    
+    public func bookmark(triad: TriadModel) {
+        let context = repos.triad.context
+        let created = Triad(context: context)
+        let words = triad.words.array.map { $0.entity! }
+        created.words = NSSet(array: words)
+        try! context.save()
+    }
+    
+    public func unbookmark(triad: TriadModel) {
+        let context = repos.triad.context
+        if triad.entity != nil {
+            context.deleteObject(triad.entity!)
         }
         try! context.save()
     }
     
-    func single(fromEntity entity: Word) -> WordModel {
+    func singleWordModel(fromEntity entity: Word) -> WordModel {
         return WordModel(word: entity.word!, relatedEntity: entity)
     }
 }

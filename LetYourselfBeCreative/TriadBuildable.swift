@@ -10,4 +10,7 @@ import Foundation
 
 public protocol TriadBuildable {
     func build()->TriadModel
+    func all()->[TriadModel]
+    func bookmark(model: TriadModel)
+    func unbookmark(model: TriadModel)
 }

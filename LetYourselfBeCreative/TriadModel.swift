@@ -10,17 +10,11 @@ import Foundation
 typealias TriadModelChanged = (sender: TriadModel)->Void
 
 public class TriadModel  {
-    init(entity: Triad?, changeHandler: TriadModelChanged) {
+    init(entity: Triad?, starred: Bool) {
         self.entity = entity
-        self.starredChangedHandler = changeHandler
+        self.starred = starred
     }
     public var words: WordGroup!
-    public var starred: Bool = false {
-        didSet {
-            print("starred changed:", self)
-            starredChangedHandler?(sender: self)
-        }
-    }
-    var entity: Triad? = nil
-    var starredChangedHandler: TriadModelChanged?
+    public var starred: Bool = false
+    var entity: Triad?
 }

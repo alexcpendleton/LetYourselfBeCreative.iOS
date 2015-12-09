@@ -46,7 +46,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         wordRepo = WordRepository(context: coreDataContext)
         triadRepo = TriadRepository(context: coreDataContext)
         triadBuilder = WordRepoTriadBuilder(wordRepo: wordRepo, triadRepo: triadRepo)
-        //triadBuilder = KnownTriadBuilder(repo: triadRepo)
+        
         initialData = InitialDataFiller.smart(coreDataContext, wordRepo: wordRepo, triadRepo: triadRepo)
         initialData.fillIfNecessary()
         

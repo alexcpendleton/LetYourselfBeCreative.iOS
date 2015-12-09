@@ -25,3 +25,4 @@ public class WordGalleryViewControllerPreparer {
         with.modelPromise = builder.build(word)
     }
 }
+
